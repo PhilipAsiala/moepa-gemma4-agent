@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Notebooks / local runtime
+.ipynb_checkpoints/
+*.parquet
+*.npz
+*.h5
+*.ckpt
+*.pt
+*.bin
+*.safetensors
+
+# Secrets & local env
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+secrets/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Data dumps (keep small fixtures if added later under data/fixtures/)
+data/raw/
+data/cache/
+outputs/
+wandb/
+runs/
