@@ -72,12 +72,10 @@ class MOEPAGemmaAgent:
         return "NO_PATCH"
 
     def _extract_initial_symbols(self, problem_statement: str) -> List[str]:
-        matched = [
-            node_id
-            for node_id in self.ontology.nodes
-            if node_id.split(".")[-1] in problem_statement
-        ]
-        return matched[:8]
+        # Prefer OntologySubstrate.rank_seeds_by_embedding(query_vec) when the sandbox
+        # (or a notebook) supplies a query vector for search_similar_code; lexical is
+        # the offline fallback. See docs/data-substrate.md.
+        return self.ontology.seed_symbols_from_text(problem_statement, limit=8)
 
     def _synthesize_edit(
         self,

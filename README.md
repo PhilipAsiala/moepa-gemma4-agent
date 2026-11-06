@@ -16,6 +16,7 @@ Wrap a small open model (Gemma 4) in a five-layer cognitive governance stack—*
 | Path | Description |
 |------|-------------|
 | **[`paper/DRAFT.md`](paper/DRAFT.md)** | **Canonical writeup** — edit this toward the ≤3,000-word Kaggle submission |
+| [`docs/data-substrate.md`](docs/data-substrate.md) | Competition graphs / embeddings / tasks → MOEPA layers (what Ontology actually reads) |
 | [`docs/execution-plan.md`](docs/execution-plan.md) | 6-day checklist (experiments → results → submit) |
 | [`docs/competition-brief.md`](docs/competition-brief.md) | Rules, rubric, prizes |
 | [`src/moepa/`](src/moepa/) | Layered agent skeleton (companion resource) |

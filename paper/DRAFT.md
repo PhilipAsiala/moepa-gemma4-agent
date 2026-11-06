@@ -102,9 +102,9 @@ If stagnation is detected across consecutive cycles (identical traceback class a
 
 ### 2.2 Layer 2 — Ontology (AST Multigraph & Semantic Grounding)
 
-Small models degrade when flooded with irrelevant files. Ontology builds a bounded subgraph $G_{\mathrm{sub}}=(V_{\mathrm{sub}},E_{\mathrm{sub}})$:
+Small models degrade when flooded with irrelevant files. Ontology builds a bounded subgraph $G_{\mathrm{sub}}=(V_{\mathrm{sub}},E_{\mathrm{sub}})$ from the competition **data substrate**: per-snapshot directed AST multigraphs (`graphs/*.json`; file/class/function nodes with CONTAIN / IMPORT / INVOKE / INHERIT edges) and aligned 256-d dense embeddings (`embeddings/*.npy`). Sandbox tools `search_similar_code`, `get_code_neighbors`, and `get_code_subgraph` project the same assets (datasheet: companion repo `docs/data-substrate.md`).
 
-1. **Semantic seed extraction.** Embed the issue text (and optional stack trace) and retrieve top-$N$ seed symbols $V_{\mathrm{seed}}$ via dense code search (256-d embeddings).
+1. **Semantic seed extraction.** Embed the issue text (and optional stack trace) and retrieve top-$N$ seed symbols $V_{\mathrm{seed}}$ via dense code search over the 256-d archive (`search_similar_code`); lexical name match is the offline fallback when no query vector is available.
 2. **Directed multigraph expansion.** Traverse caller/callee and inheritance edges from $V_{\mathrm{seed}}$ up to hop depth $h$ (default $h\le 2$, raised by Metrology under stagnation).
 3. **Boundary enforcement.** Only symbols in $V_{\mathrm{sub}}$ (plus standard library) enter the prompt. Candidate patches that introduce undefined symbols are rejected *before* test execution.
 
@@ -135,7 +135,7 @@ A locally green unit test is not sufficient. Before emitting a unified diff, Axi
 
 - **Tasks:** public development split of repository-level Python bug-fix tasks (offline sandbox).
 - **Model:** Gemma 4 (open weights), local / offline inference. <!-- [TODO: exact variant + quantization] -->
-- **Assets:** directed AST multigraphs + 256-d dense embeddings for retrieval and subgraph expansion.
+- **Assets (data substrate):** `tasks.jsonl` (public development split, 129 tasks); `graphs/*.json` directed AST multigraphs; `embeddings/*.npy` 256-d node vectors. Ontology reads the latter two; Metrology keys on task ids; Epistemology runs the sandbox `pytest` harness named on each task.
 - **Metrics:** resolve rate (fail-to-pass without pass-to-pass regressions), mean wall time / task, regression / corrupted-diff rate, abstention rate (`NO_PATCH`).
 
 ### 3.2 Ablation protocol
