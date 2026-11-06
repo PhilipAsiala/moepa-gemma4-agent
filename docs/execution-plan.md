@@ -18,8 +18,10 @@ Aim to be competitive for all three Paper Track awards by shipping:
 
 - [ ] Accept rules on Paper Track (and Main Competition if also entering)
 - [x] Repo public with paper skeleton + code modules
+- [x] Apache 2.0 `LICENSE` (winner license type + public code sharing)
 - [ ] Join / verify identity on Kaggle if not done
 - [ ] Create draft Kaggle Writeup early (tie-break is first entry among equal scores)
+- [ ] When sharing code: mirror on competition **forum and/or public notebook** (GitHub alone is not enough under Kaggle public-sharing rules)
 
 ### Sat–Mon (Nov 7–9) — evidence
 
@@ -36,7 +38,9 @@ Aim to be competitive for all three Paper Track awards by shipping:
 
 - [ ] Trim writeup to ≤ **3,000 words** (`python scripts/wordcount.py`)
 - [ ] Expand Related Work only with papers you actually engaged
-- [ ] Publish public Kaggle Notebook (graph + embedding walkthrough)
+- [ ] Publish **public** Kaggle Notebook (graph + embedding walkthrough) linking https://github.com/PhilipAsiala/moepa-gemma4-agent
+- [ ] Forum post: repo + notebook links for all participants
+- [ ] Writeup Project Links → this repo (+ notebook / PDF)
 - [ ] Optional: export PDF via Public Project Link
 - [ ] Self-score rubric 0–5 on Novelty / Quality / Relevance / Verifiability / Clarity
 
