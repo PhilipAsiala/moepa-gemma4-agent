@@ -11,42 +11,35 @@ Research repository for **Google – The Gemma 4 Developer Agent Paper Track** o
 
 Wrap a small open model (Gemma 4) in a five-layer cognitive governance stack—**Metrology, Ontology, Epistemology, Praxeology, Axiology**—so offline agents can navigate code graphs, propose patches, and refuse unsafe or unverified edits on consumer hardware.
 
-## Repository contents
+## Start here (paper prep)
 
 | Path | Description |
 |------|-------------|
-| [`docs/moepa-plan-and-paper-draft.md`](docs/moepa-plan-and-paper-draft.md) | Competition plan + paper draft (methods, ablations, related work) |
-| [`docs/competition-brief.md`](docs/competition-brief.md) | Paper Track rules, rubric, prizes, and submission checklist |
+| **[`paper/DRAFT.md`](paper/DRAFT.md)** | **Canonical writeup** — edit this toward the ≤3,000-word Kaggle submission |
+| [`docs/execution-plan.md`](docs/execution-plan.md) | 6-day checklist (experiments → results → submit) |
+| [`docs/competition-brief.md`](docs/competition-brief.md) | Rules, rubric, prizes |
+| [`src/moepa/`](src/moepa/) | Layered agent skeleton (companion resource) |
+| `python scripts/wordcount.py` | Word-count helper vs 3,000 limit |
 
 ## Paper Track snapshot
 
 - **Scope:** Original, unpublished research · max **3,000 words** (Kaggle Writeup)
-- **Non-archival:** Does not block later conference / thesis publication
-- **Optional assets:** Public notebook and/or public project link (e.g. arXiv-ready PDF)
-- **Judging (equal weight, 0–5 each):** Novelty · Quality · Relevance · Verifiability · Clarity
+- **Required sections:** title + subtitle · abstract · introduction · methods/experiments · related work + citations
+- **Optional:** public notebook and/or public PDF project link
+- **Judging (equal weight, 0–5):** Novelty · Quality · Relevance · Verifiability · Clarity
 
 ### Prizes ($35,000)
 
 | Award | Amount |
 |-------|--------|
 | Overall Best Paper | $15,000 |
-| Best New Resource (dataset, library, software) | $10,000 |
+| Best New Resource | $10,000 |
 | Best New Application | $10,000 |
 
-Top papers may be highlighted at a Google-hosted NeurIPS 2026 expo / workshop.
+## Status
 
-### Encouraged topics
-
-Tuning & optimization · Code comprehension (graphs / embeddings) · Tasks & benchmarks · Graph reasoning
+Paper skeleton and code modules are in place. **Section 3 results are TBD** until the public-task micro-benchmark runs (see execution plan).
 
 ## Citation
 
 > Elan Markowitz, Bryan Perozzi, Benedek Rózemberczki, Glenn Cameron, Hadi Hemmati, Yuchen Li, Michael Galkin, Majid Farhadi, Ryan Holbrook, and Ashley Oldacre. *Google - The Gemma 4 Developer Agent Paper Track*. https://www.kaggle.com/competitions/gemma-4-developer-agent-paper, 2026. Kaggle.
-
-## Status
-
-Early planning / draft stage. Implementation and experimental results will land here as the writeup is finalized before the Nov 12 deadline.
-
-## License
-
-TBD — add a license before treating this as a public research artifact for judging.
