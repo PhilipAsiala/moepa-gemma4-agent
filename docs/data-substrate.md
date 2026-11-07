@@ -12,7 +12,7 @@ Public development set (Paper Track / Main Track shared assets). Exact paths fol
 | --- | --- | --- |
 | Task list | `tasks.jsonl` | One JSON object per issue: id, repo, problem statement, base commit, FAIL_TO_PASS / PASS_TO_PASS test names. Metrology keys the loop on `task["id"]`. |
 | Directed AST multigraphs | `graphs/*.json` | Per-snapshot typed multigraph. Ontology’s structural index: nodes = symbols (file / class / function), edges = structural relations. |
-| Dense code embeddings | `embeddings/*.npz` | 256-d `float32` vectors aligned to graph nodes. Dense retrieval seed for Ontology (`search_similar_code` in the sandbox). |
+| Dense code embeddings | `embeddings/*.npz` | Per-node 256-d `float32` vectors (one array per node id). Dense retrieval seed for Ontology (`search_similar_code` in the sandbox). |
 | Offline sandbox | Python 3.13 `swebench-sandbox` | Epistemology’s dynamic gate (`pytest`) and Praxeology’s apply/reset surface. |
 | Eval budget | `eval_config.yaml` (Main Track) | Metrology’s wall-clock and per-task budget source of truth under the 12-hour horizon. |
 
@@ -50,10 +50,10 @@ Offline micro-benchmarks can call the same logic through `OntologySubstrate` wit
 ## Embedding schema
 
 - Dimensionality: **256**.
-- Storage: NumPy `.npz` archives under `embeddings/`.
+- Storage: NumPy `.npz` under `embeddings/` — keys are graph `node_id`s, values are `float32[256]`. Files are typically named `<repo>_<base_commit>.npz` (CLI download); Kaggle may also expose task-named hardlinks.
 - Intended use: dense similarity of the issue text (and optional traceback) against node vectors to produce $V_{\mathrm{seed}}$, then expand structurally.
 
-`OntologySubstrate` loads the array when `embedding_path` is given. Seed ranking by cosine is available once a query vector is supplied (`rank_seeds_by_embedding`). Producing that query vector is the sandbox’s `search_similar_code` (or a local embedder in a notebook). Lexical name match (`seed_symbols_from_text`) remains the offline fallback used by the agent skeleton when no query embedding is available.
+`OntologySubstrate` stacks `.npz` entries into an `(N, 256)` matrix aligned to graph node order when `embedding_path` is given. Seed ranking by cosine is available once a query vector is supplied (`rank_seeds_by_embedding`). Producing that query vector is the sandbox’s `search_similar_code` (or a local embedder in a notebook). Lexical name match (`seed_symbols_from_text`) remains the offline fallback used by the agent skeleton when no query embedding is available.
 
 Independent Paper Track probes have reported that these embeddings can be weakly discriminative (near-uniform cosines). That is an empirical claim about the asset, not a reason to drop it: Ontology still **bounds** context with the graph even when the seed comes from lexical match. The ablation in §3 is designed to measure what the graph + embedding substrate actually buys under MOEPA gates.
 

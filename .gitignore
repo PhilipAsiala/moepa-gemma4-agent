@@ -37,9 +37,15 @@ Thumbs.db
 .vscode/
 *.swp
 
-# Data dumps (keep small fixtures if added later under data/fixtures/)
-data/raw/
-data/cache/
+# Competition data (do not commit — redistribute only via Kaggle)
+data/**
+!data/README.md
+!data/fixtures/
+!data/fixtures/**
+
+# Local tooling
+.venv/
+
 outputs/
 wandb/
 runs/

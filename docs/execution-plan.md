@@ -25,7 +25,7 @@ Aim to be competitive for all three Paper Track awards by shipping:
 
 ### Sat–Mon (Nov 7–9) — evidence
 
-- [ ] Download public assets (`tasks.jsonl`, graphs, embeddings) into `data/` per [`data-substrate.md`](data-substrate.md)
+- [x] Download public assets (`tasks.jsonl`, graphs, embeddings) into `data/` per [`data-substrate.md`](data-substrate.md) — snapshots/wheels skipped for now
 - [ ] Wire Gemma 4 into `MOEPAGemmaAgent._synthesize_edit`
 - [ ] Run micro-benchmark on **20–30** public tasks:
   - baseline ReAct

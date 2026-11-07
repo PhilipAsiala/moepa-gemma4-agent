@@ -3,7 +3,7 @@
 Consumes the competition data substrate documented in docs/data-substrate.md:
 
 - graphs/*.json  → nodes[{id, text, ...}], edges[{source, target, ...}]
-- embeddings/*.npy → optional 256-d float32 matrix aligned row-wise with node order
+- embeddings/*.npz → one float32[256] array per node id (competition layout)
 """
 
 from __future__ import annotations
@@ -26,7 +26,21 @@ class OntologySubstrate:
         self.edges: List[dict] = self.graph_data.get("edges", [])
         self.embeddings: Optional[np.ndarray] = None
         if embedding_path is not None and embedding_path.exists():
-            arr = np.load(embedding_path)
+            self.embeddings = self._load_embedding_matrix(embedding_path)
+
+    def _load_embedding_matrix(self, embedding_path: Path) -> np.ndarray:
+        """Build a (N, 256) matrix aligned to `self.node_ids` from .npz or .npy."""
+        loaded = np.load(embedding_path)
+        if isinstance(loaded, np.lib.npyio.NpzFile):
+            missing = [nid for nid in self.node_ids if nid not in loaded.files]
+            if missing:
+                raise ValueError(
+                    f"{len(missing)} graph nodes missing from {embedding_path.name} "
+                    f"(e.g. {missing[0]!r})"
+                )
+            arr = np.stack([loaded[nid] for nid in self.node_ids]).astype(np.float32)
+        else:
+            arr = np.asarray(loaded)
             if arr.ndim != 2:
                 raise ValueError(f"embeddings must be 2-d, got shape {arr.shape}")
             if arr.shape[0] != len(self.node_ids):
@@ -34,10 +48,10 @@ class OntologySubstrate:
                     f"embedding rows ({arr.shape[0]}) != node count ({len(self.node_ids)}); "
                     "rows must align with graph nodes in order"
                 )
-            # Unit-normalize so cosine = dot product.
-            norms = np.linalg.norm(arr, axis=1, keepdims=True)
-            norms[norms == 0] = 1.0
-            self.embeddings = (arr / norms).astype(np.float32)
+            arr = arr.astype(np.float32)
+        norms = np.linalg.norm(arr, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        return arr / norms
 
     def get_code_neighbors(self, symbol_id: str, hops: int = 1) -> Set[str]:
         """Traverse directed AST multigraph edges up to k hops (undirected expansion)."""
