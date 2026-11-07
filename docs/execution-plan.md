@@ -36,12 +36,13 @@ Aim to be competitive for all three Paper Track awards by shipping:
 - [x] Trim writeup to ≤ **3,000 words** (`python scripts/wordcount.py`) — WRITEUP/DRAFT both **2510** (under limit; no Discussion/Related Work trim needed)
 - [ ] Expand Related Work only with papers you actually engaged
 - [x] Scaffold Kaggle-notebook Markdown: [`../notebooks/moepa-graph-walkthrough.md`](../notebooks/moepa-graph-walkthrough.md) (graph + embedding load; placeholders when `data/` absent)
-- [ ] Publish **public** Kaggle Notebook from that scaffold linking https://github.com/PhilipAsiala/moepa-gemma4-agent
+- [ ] Publish **public** Kaggle Notebook from that scaffold linking https://github.com/PhilipAsiala/moepa-gemma4-agent — steps in [`kaggle-publish-checklist.md`](kaggle-publish-checklist.md)
 - [x] Android cloud-agent control notes: [`android-cloud.md`](android-cloud.md) (cursor.com/agents on Chrome; GPU/data stay on workstation)
-- [ ] Forum post: repo + notebook links for all participants
+- [ ] Forum post: repo + notebook links for all participants — draft text in checklist
 - [ ] Writeup Project Links → this repo (+ notebook / PDF)
 - [ ] Optional: export PDF via Public Project Link
-- [ ] Self-score rubric 0–5 on Novelty / Quality / Relevance / Verifiability / Clarity
+- [x] Self-score rubric draft: [`self-score.md`](self-score.md) (revisit after notebook is public)
+- [x] Merged cloud polish branch into `main` (`ca16129`)
 
 ### Thu Nov 12
 
