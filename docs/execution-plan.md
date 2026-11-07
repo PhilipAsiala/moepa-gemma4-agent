@@ -33,9 +33,11 @@ Aim to be competitive for all three Paper Track awards by shipping:
 
 ### Tue–Wed (Nov 10–11) — polish
 
-- [ ] Trim writeup to ≤ **3,000 words** (`python scripts/wordcount.py`)
+- [x] Trim writeup to ≤ **3,000 words** (`python scripts/wordcount.py`) — WRITEUP/DRAFT both **2510** (under limit; no Discussion/Related Work trim needed)
 - [ ] Expand Related Work only with papers you actually engaged
-- [ ] Publish **public** Kaggle Notebook (graph + embedding walkthrough) linking https://github.com/PhilipAsiala/moepa-gemma4-agent
+- [x] Scaffold Kaggle-notebook Markdown: [`../notebooks/moepa-graph-walkthrough.md`](../notebooks/moepa-graph-walkthrough.md) (graph + embedding load; placeholders when `data/` absent)
+- [ ] Publish **public** Kaggle Notebook from that scaffold linking https://github.com/PhilipAsiala/moepa-gemma4-agent
+- [x] Android cloud-agent control notes: [`android-cloud.md`](android-cloud.md) (cursor.com/agents on Chrome; GPU/data stay on workstation)
 - [ ] Forum post: repo + notebook links for all participants
 - [ ] Writeup Project Links → this repo (+ notebook / PDF)
 - [ ] Optional: export PDF via Public Project Link

@@ -22,6 +22,8 @@ Wrap a small open model (Gemma 4) in a five-layer cognitive governance stack—*
 | [`outputs/microbench.json`](outputs/microbench.json) | Raw microbench rows |
 | [`scripts/paper_microbench.py`](scripts/paper_microbench.py) | Reproduce substrate / gate / localization probes |
 | [`docs/data-substrate.md`](docs/data-substrate.md) | Competition graphs / embeddings → MOEPA layers |
+| [`docs/android-cloud.md`](docs/android-cloud.md) | Continue this agent from Android Chrome (`cursor.com/agents`) |
+| [`notebooks/moepa-graph-walkthrough.md`](notebooks/moepa-graph-walkthrough.md) | Public Kaggle notebook scaffold (one graph + embedding walk) |
 | [`src/moepa/`](src/moepa/) | Layered agent + Ollama client |
 
 ## Headline public-dev results
@@ -54,9 +56,13 @@ Copyright 2026 Philip Asiala · **Apache License 2.0** — see [`LICENSE`](LICEN
 
 ## Kaggle public sharing
 
-1. Publish a public Kaggle Notebook linking this repo.  
+1. Publish a public Kaggle Notebook from [`notebooks/moepa-graph-walkthrough.md`](notebooks/moepa-graph-walkthrough.md) linking this repo.  
 2. Forum post with repo + notebook.  
 3. Writeup Project Links → this GitHub URL.
+
+## Phone follow-ups (Android)
+
+Open **https://cursor.com/agents** in Chrome, pick this cloud agent, and send follow-ups. Local Arc Pro B70 / Ollama / `data/snapshots` stay on the workstation — see [`docs/android-cloud.md`](docs/android-cloud.md).
 
 ## Citation
 
