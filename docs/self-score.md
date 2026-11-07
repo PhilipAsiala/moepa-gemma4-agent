@@ -8,7 +8,7 @@ Rubric axes 0–5. Update before Submit. Scores below are honest against current
 | **Quality** | 4 | Measured numbers, ablations (random neighborhood, issue-only vs ontology, syntax-only vs pytest gate), limitations stated. Agent resolve still 0/3. |
 | **Relevance** | 4.5 | Directly targets offline Gemma 4 SWE agents on the provided substrate. |
 | **Verifiability** | 4 | Public Apache-2.0 repo, scripts, raw JSON, snapshot + wheel probes. Official swegemma Docker verifier not claimed. |
-| **Clarity** | 4 | Method figure + table; word count under 3k. Still trim jargon if judges skim. |
+| **Clarity** | 4 | Method figure + table; word count under 3k. Abstract/Conclusion jargon trimmed (Clarity pass). |
 
 **Target awards**
 
@@ -18,4 +18,4 @@ Rubric axes 0–5. Update before Submit. Scores below are honest against current
 | Best New Application | Strong | Keep “governance of small models on graphs” as the hook |
 | Best New Resource | Incomplete until notebook is **public** on Kaggle | Paste [`notebooks/moepa-graph-walkthrough.md`](../notebooks/moepa-graph-walkthrough.md) |
 
-Revisit scores after the Kaggle Notebook is live and after one Clarity pass on `paper/WRITEUP.md`.
+Clarity pass on `paper/WRITEUP.md` Abstract/Conclusion is done. Revisit scores after the Kaggle Notebook is live.

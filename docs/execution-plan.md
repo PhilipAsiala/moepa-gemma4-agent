@@ -33,7 +33,7 @@ Aim to be competitive for all three Paper Track awards by shipping:
 
 ### Tue–Wed (Nov 10–11) — polish
 
-- [x] Trim writeup to ≤ **3,000 words** (`python scripts/wordcount.py`) — WRITEUP/DRAFT both **2510** (under limit; no Discussion/Related Work trim needed)
+- [x] Trim writeup to ≤ **3,000 words** (`python scripts/wordcount.py`) — WRITEUP/DRAFT both **2472** after Clarity pass (Abstract/Conclusion jargon shortened; §3 numbers unchanged)
 - [ ] Expand Related Work only with papers you actually engaged
 - [x] Scaffold Kaggle-notebook Markdown: [`../notebooks/moepa-graph-walkthrough.md`](../notebooks/moepa-graph-walkthrough.md) (graph + embedding load; placeholders when `data/` absent)
 - [ ] Publish **public** Kaggle Notebook from that scaffold linking https://github.com/PhilipAsiala/moepa-gemma4-agent — steps in [`kaggle-publish-checklist.md`](kaggle-publish-checklist.md)
@@ -46,7 +46,7 @@ Aim to be competitive for all three Paper Track awards by shipping:
 
 ### Thu Nov 12
 
-- [ ] Final edit pass for Clarity
+- [x] Clarity pass on Abstract + Conclusion (`paper/WRITEUP.md`, mirrored to `DRAFT.md`); paste-map blurb in [`kaggle-publish-checklist.md`](kaggle-publish-checklist.md)
 - [ ] Click **Submit** on the Writeup (drafts do not count)
 - [ ] Confirm notebook / repo links are public without login
 
