@@ -23,7 +23,7 @@
 
 ## Abstract
 
-Autonomous software engineering agents powered by small open-weights models (such as the Gemma 4 family) face two fundamental failure modes when operating offline on consumer hardware: (1) **structural hallucination**, where probabilistic token generation violates repository-wide call signatures or import graphs, and (2) **unbounded epistemic loops**, where iterative test-fix cycles exhaust wall-clock and memory budgets on intractable edge cases. We introduce **MOEPA** (Metrology, Ontology, Epistemology, Praxeology, Axiology), a five-layer cognitive governance architecture that wraps small language models in deterministic formal interlocks. By grounding the Ontology layer in the repository’s directed Abstract Syntax Tree (AST) multigraph and dense semantic embeddings, and enforcing Epistemological fail-to-pass verification and Axiological regression-free invariants, MOEPA transforms an unconstrained generative model into a bounded, verifiable state machine. A Metrology layer further enforces dynamic per-task compute telemetry and stagnation detection across a fixed evaluation horizon, preventing localized deadlocks and allocating budget across many tasks. <!-- [TODO: one sentence with headline ablation result once measured] -->
+Autonomous software engineering agents powered by small open-weights models (such as the Gemma 4 family) face two fundamental failure modes when operating offline on consumer hardware: (1) **structural hallucination**, where probabilistic token generation violates repository-wide call signatures or import graphs, and (2) **unbounded epistemic loops**, where iterative test-fix cycles exhaust wall-clock and memory budgets on intractable edge cases. We introduce **MOEPA** (Metrology, Ontology, Epistemology, Praxeology, Axiology), a five-layer cognitive governance architecture that wraps small language models in deterministic formal interlocks. By grounding the Ontology layer in the repository’s directed Abstract Syntax Tree (AST) multigraph and dense semantic embeddings, and enforcing Epistemological fail-to-pass verification and Axiological regression-free invariants, MOEPA transforms an unconstrained generative model into a bounded, verifiable state machine. A Metrology layer further enforces dynamic per-task compute telemetry and stagnation detection across a fixed evaluation horizon, preventing localized deadlocks and allocating budget across many tasks. On the 129-task public development set, a lexical seed plus one call-graph hop covers a gold hunk symbol in 19.2% of cases against 3.2% for a size-matched random neighborhood. A 12-task Gemma 4 12B probe names the edited file on 4/12 tasks with that neighborhood and on 3/12 from the issue text alone.
 
 **Keywords:** agentic software engineering · offline coding agents · AST multigraphs · graph reasoning · cognitive architectures · Gemma 4
 
@@ -50,7 +50,7 @@ We formalize the **MOEPA Cognitive Architecture**, separating probabilistic synt
 1. A five-layer governance architecture that makes small offline coding agents behave as bounded state machines rather than open chat loops.
 2. An Ontology substrate that uses directed AST multigraphs and dense code embeddings to constrain prompt context and reject out-of-neighborhood symbol use.
 3. Deterministic Epistemology and Axiology gates (static AST checks, sandbox tests, policy invariants, calibrated abstention).
-4. An ablation protocol on repository-level Python tasks that isolates the incremental value of each governance layer. <!-- [TODO: replace with measured contribution once experiments land] -->
+4. Measurements on all 129 public tasks for neighborhood coverage and policy gates, plus a 12-task Gemma 4 12B localization probe. End-to-end resolve rate is deferred until repository snapshots are in the loop.
 
 ---
 
@@ -102,7 +102,7 @@ If stagnation is detected across consecutive cycles (identical traceback class a
 
 ### 2.2 Layer 2 — Ontology (AST Multigraph & Semantic Grounding)
 
-Small models degrade when flooded with irrelevant files. Ontology builds a bounded subgraph $G_{\mathrm{sub}}=(V_{\mathrm{sub}},E_{\mathrm{sub}})$ from the competition **data substrate**: per-snapshot directed AST multigraphs (`graphs/*.json`; file/class/function nodes with CONTAIN / IMPORT / INVOKE / INHERIT edges) and aligned 256-d dense embeddings (`embeddings/*.npy`). Sandbox tools `search_similar_code`, `get_code_neighbors`, and `get_code_subgraph` project the same assets (datasheet: companion repo `docs/data-substrate.md`).
+Small models degrade when flooded with irrelevant files. Ontology builds a bounded subgraph $G_{\mathrm{sub}}=(V_{\mathrm{sub}},E_{\mathrm{sub}})$ from the competition **data substrate**: per-snapshot directed AST multigraphs (`graphs/*.json`) and aligned 256-d dense embeddings (`embeddings/*.npz`, one vector per node id). In the public archives the edges we loaded are `calls` edges between dotted symbol ids, and node text is a source snippet rather than a whole file. Sandbox tools `search_similar_code`, `get_code_neighbors`, and `get_code_subgraph` project the same assets (datasheet: companion repo `docs/data-substrate.md`).
 
 1. **Semantic seed extraction.** Embed the issue text (and optional stack trace) and retrieve top-$N$ seed symbols $V_{\mathrm{seed}}$ via dense code search over the 256-d archive (`search_similar_code`); lexical name match is the offline fallback when no query vector is available.
 2. **Directed multigraph expansion.** Traverse caller/callee and inheritance edges from $V_{\mathrm{seed}}$ up to hop depth $h$ (default $h\le 2$, raised by Metrology under stagnation).
@@ -129,31 +129,39 @@ A locally green unit test is not sufficient. Before emitting a unified diff, Axi
 
 ## 3. Experimental Setup
 
-<!-- STATUS: design locked; numbers are PLACEHOLDERS until the micro-benchmark runs. -->
+Repository snapshots were not checked out, so this section does not report a pytest resolve rate. The numbers below are from `scripts/paper_microbench.py` on the public development assets. Raw rows are in the companion `docs/microbench-results.md`.
 
 ### 3.1 Environment
 
-- **Tasks:** public development split of repository-level Python bug-fix tasks (offline sandbox).
-- **Model:** Gemma 4 (open weights), local / offline inference. <!-- [TODO: exact variant + quantization] -->
-- **Assets (data substrate):** `tasks.jsonl` (public development split, 129 tasks); `graphs/*.json` directed AST multigraphs; `embeddings/*.npy` 256-d node vectors. Ontology reads the latter two; Metrology keys on task ids; Epistemology runs the sandbox `pytest` harness named on each task.
-- **Metrics:** resolve rate (fail-to-pass without pass-to-pass regressions), mean wall time / task, regression / corrupted-diff rate, abstention rate (`NO_PATCH`).
+- **Tasks:** 129 public development tasks (67 FastAPI, 48 Rich, 13 Requests, 1 HTTPX) over 127 base commits. Each commit has a paired `graphs/*.json` and `embeddings/*.npz`.
+- **Graphs:** directed `calls` edges. Node ids are dotted symbols. Node text is a source snippet.
+- **Model:** `gemma4:12b` (about 8 GB) on a local Ollama server, Vulkan, context 4096, thinking disabled for the localization probe. The probe asks for a JSON list of files.
+- **What is not in this run:** base-commit checkouts, the official sandbox, and fail-to-pass `pytest`. Those are required for resolve rate and are left out on purpose.
 
-### 3.2 Ablation protocol
+### 3.2 What was measured
 
-We ablate governance layers on a fixed public subset (target: full public split; first pass: 20–30 tasks for speed).
-
-| Configuration | L2 Ontology | L3 Epistemology | L1 Metrology | L5 Axiology | Resolve % | Avg s/task | Regressions |
-|---------------|:-----------:|:---------------:|:------------:|:-----------:|:---------:|:----------:|:-----------:|
-| Gemma 4 ReAct baseline | – | – | – | – | TBD | TBD | TBD |
-| + Ontology | ✓ | – | – | – | TBD | TBD | TBD |
-| + Ontology + Epistemology | ✓ | ✓ | – | – | TBD | TBD | TBD |
-| Full MOEPA | ✓ | ✓ | ✓ | ✓ | TBD | TBD | TBD |
-
-**Hypotheses.** Ontology should cut irrelevant context and structural hallucination; Epistemology should cut syntax/import failures reaching submission; Metrology should improve multi-task throughput under a fixed wall; Axiology should drive regressions toward zero at some cost in abstention.
+1. **Embedding geometry.** Cosine between L2-normalized node vectors on all 127 snapshots (about 200 random pairs each).
+2. **Ontology coverage.** Lexical seeds from the issue text, expanded one hop along `calls`. A gold file is covered when a neighborhood id lies in that file's module. A gold hunk symbol is covered when some id ends with that function or class name. The baseline draws the same number of random seeds and expands them the same way (5 trials).
+3. **Gates.** Axiology on every gold solution diff, then on that diff with a test file or `imp.py` appended, and on an empty diff. Metrology on repeated versus varied diagnostic signatures.
+4. **Gemma localization.** Twelve tasks (1 HTTPX, 3 Requests, 4 Rich, 4 FastAPI), fixed before the run. Two prompts: the issue alone, and the issue plus a 5,000-character cap of the neighborhood. A hit is the same file as the gold diff, ignoring a leading `src/`.
 
 ### 3.3 Results
 
-<!-- [TODO] Fill after Saturday–Monday micro-benchmark. Lead with 2–3 sentences + the completed table. Optional: failure-mode breakdown (hallucinated imports vs loop exhaustion vs policy reject). -->
+The shipped embeddings are weakly discriminative. Mean cosine is 0.829 for random pairs and 0.829 for cross-parent pairs. Same-parent pairs rise only to 0.885. We did not embed the issue into this space. The competition query encoder is not in this repository, and a vector from another model would not be comparable. Seeding stayed lexical.
+
+The call neighborhood beats chance. It covers 53/278 gold files (19.1%) against a random-neighborhood recall of 0.126, and at least one gold file in 47/129 tasks (36.4%) against 16.4% for the random draws. Hunk-symbol coverage is 70/364 (19.2%) against 3.2%. Thirty-two tasks yield no lexical seed, so the neighborhood is empty. Median neighborhood text is about 10,000 characters and the 90th percentile is about 410,000, so 74/129 neighborhoods do not fit the 4,096-token prompt without a hard cap.
+
+Axiology approves all 129 gold solution diffs and rejects all 129 test-tampered diffs, all 129 shim edits, and the empty diff. Metrology leaves the hop radius at 1 when diagnostics change. On a repeated diagnostic it steps the radius through 1, 2, 3 and stops after four cycles.
+
+Gemma 4 12B does not turn that coverage into better file names on this probe. Issue text alone hits 3/12 files (mean 1.7 s). The capped neighborhood hits 4/12 (mean 3.3 s). Every reply parsed. None abstained. Two of the twelve tasks had an empty neighborhood, so the second prompt could not add code. On several misses the model names a plausible file in another project (`textual`, `typer`, `pytorch`) until the neighborhood pulls the guess back into the target repository, without landing on the edited file.
+
+| Probe | Result |
+|---|---|
+| Hunk-symbol coverage, lexical + 1 hop | 70/364 (19.2%), random 3.2% |
+| Task with ≥1 gold file covered | 47/129 (36.4%), random 16.4% |
+| Axiology on gold / tamper / shim / empty | 129 approved / 129 / 129 / 129 rejected |
+| Gemma 4 12B file hit, issue only | 3/12, 1.7 s |
+| Gemma 4 12B file hit, plus neighborhood | 4/12, 3.3 s |
 
 ---
 
@@ -171,7 +179,7 @@ We ablate governance layers on a fixed public subset (target: full public split;
 
 **Generality.** Although motivated by an offline sandbox with precomputed graphs and embeddings, the layer split applies to any setting where (i) a structural index of the repo exists or can be built, and (ii) tests provide a cheap epistemic oracle. Without graphs, Ontology degrades to heuristic retrieval; without tests, Epistemology collapses to static checks only.
 
-**Limitations.** <!-- refine after results --> Calibrated abstention trades resolve rate for safety. Static arity checks do not capture semantic contracts. Embedding retrieval can miss the true fault locus. Philosophical layer names aid clarity but must not obscure that each layer is a concrete software module with deterministic predicates.
+**Limitations.** These measurements do not include a pytest resolve rate. Thirty-two of 129 issues produce no lexical seed, and most neighborhoods must be truncated before they fit a 4,096-token context, so the Gemma probe often never sees the covered symbol. The 12-task file-hit gap (4/12 versus 3/12) is too small to treat as an effect. Static arity checks are not yet wired into the agent loop. Embedding retrieval cannot be claimed until a query vector is produced in this same 256-d space. Philosophical layer names aid clarity but must not obscure that each layer is a concrete software module with deterministic predicates.
 
 **Ethics / safety.** Axiology’s test-integrity and shim rules reduce a common failure mode (cheating the oracle). Offline deployment reduces dependency on proprietary APIs but still requires care around executing untrusted patches in sandboxes.
 
@@ -179,7 +187,7 @@ We ablate governance layers on a fixed public subset (target: full public split;
 
 ## 6. Conclusion
 
-MOEPA reframes small-model coding agents as **governed state machines**: graph-grounded context, test-backed truth, policy-backed emission, and metrological budget control. <!-- [TODO: one sentence summarizing the strongest ablation finding.] --> We release this writeup (and companion code) to support reproducible research on offline, consumer-hardware agentic software engineering.
+MOEPA reframes small-model coding agents as **governed state machines**: graph-grounded context, test-backed truth, policy-backed emission, and metrological budget control. The public call graph does localize gold hunk symbols well above chance, and the policy gate separates solution diffs from test tampering. On a 12-task probe, Gemma 4 12B does not yet convert that neighborhood into more correct file names. We release this writeup (and companion code) to support reproducible research on offline, consumer-hardware agentic software engineering.
 
 ---
 

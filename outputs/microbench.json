@@ -1,0 +1,3734 @@
+{
+  "seed": 20261107,
+  "n_tasks": 129,
+  "embeddings": {
+    "snapshots": 127,
+    "random_pair": {
+      "n": 25391,
+      "mean": 0.8292693080095415,
+      "std": 0.1759465976895851,
+      "p10": 0.5322630405426025,
+      "p50": 0.880983293056488,
+      "p90": 0.9894198775291443
+    },
+    "same_parent": {
+      "n": 311,
+      "mean": 0.8853635642306215,
+      "std": 0.1721248026586015,
+      "p10": 0.5855185985565186,
+      "p50": 0.9732460975646973,
+      "p90": 0.9998047947883606
+    },
+    "cross_parent": {
+      "n": 25080,
+      "mean": 0.8285737213394954,
+      "std": 0.1758812059281914,
+      "p10": 0.5310217142105103,
+      "p50": 0.880058228969574,
+      "p90": 0.9889585018157959
+    }
+  },
+  "localization": {
+    "n_tasks": 129,
+    "n_files": 278,
+    "n_symbols": 364,
+    "lex_file_hits": 53,
+    "lex_symbol_hits": 70,
+    "lex_tasks": 47,
+    "rand_file_recall": 0.12563554447275377,
+    "rand_task_rate": 0.16434108527131785,
+    "rand_symbol_recall": 0.03173374834531859,
+    "ctx_chars": {
+      "n": 129,
+      "mean": 71341.24806201551,
+      "std": 150589.31835179875,
+      "p10": 0.0,
+      "p50": 9995.0,
+      "p90": 409955.60000000003
+    },
+    "over_cap": 74,
+    "mean_seeds": 3.9612403100775193,
+    "mean_ctx_nodes": 28.953488372093023
+  },
+  "localization_rows": [
+    {
+      "instance_id": "fastapi_15661",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 8,
+      "n_ctx": 25,
+      "ctx_chars": 20948,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [
+        "custom_response.tutorial008_py310.main",
+        "fastapi.cli.main",
+        "fastapi.openapi.models.Link",
+        "scripts.add_latest_release_date.main",
+        "scripts.notify_translations.main",
+        "scripts.deploy_docs_status.main",
+        "scripts.topic_repos.main",
+        "scripts.contributors.main"
+      ],
+      "gold_files": [
+        "scripts/prepare_release.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15588",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 8,
+      "n_ctx": 141,
+      "ctx_chars": 463707,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.1,
+      "seeds": [
+        "fastapi.applications.FastAPI",
+        "fastapi.cli.main",
+        "fastapi.openapi.models.Server",
+        "fastapi.openapi.models.Link",
+        "custom_response.tutorial008_py310.main",
+        "scripts.deploy_docs_status.main",
+        "scripts.contributors.main",
+        "scripts.add_latest_release_date.main"
+      ],
+      "gold_files": [
+        "fastapi/sse.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15589",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 26,
+      "ctx_chars": 22490,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_callable_endpoint.main",
+        "tests.test_router_events.main",
+        "fastapi.cli.main",
+        "fastapi._compat.v2.ModelField.default",
+        "fastapi.openapi.models.Link",
+        "scripts.contributors.main",
+        "scripts.notify_translations.main",
+        "scripts.people.main"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15030",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 9,
+      "n_gold_symbols": 6,
+      "n_seeds": 2,
+      "n_ctx": 126,
+      "ctx_chars": 450998,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.applications.FastAPI",
+        "fastapi.openapi.models.Server"
+      ],
+      "gold_files": [
+        "docs_src/server_sent_events/tutorial001_py310.py",
+        "docs_src/server_sent_events/tutorial002_py310.py",
+        "docs_src/server_sent_events/tutorial003_py310.py",
+        "docs_src/server_sent_events/tutorial004_py310.py",
+        "docs_src/server_sent_events/tutorial005_py310.py",
+        "fastapi/openapi/utils.py",
+        "fastapi/responses.py",
+        "fastapi/routing.py",
+        "fastapi/sse.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14962",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 3,
+      "n_gold_symbols": 3,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "docs_src/custom_response/tutorial010_py310.py",
+        "fastapi/_compat/v2.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15280",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "docs_src/vibe/tutorial001_py310.py",
+        "fastapi/applications.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14964",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 4,
+      "n_ctx": 8,
+      "ctx_chars": 2413,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [
+        "tests.test_default_response_class.ORJSONResponse",
+        "fastapi.responses.UJSONResponse",
+        "fastapi.responses.ORJSONResponse",
+        "fastapi._compat.v2.ModelField.default"
+      ],
+      "gold_files": [
+        "fastapi/responses.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15023",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "docs_src/stream_data/tutorial002_py310.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14986",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 5,
+      "n_ctx": 7,
+      "ctx_chars": 4882,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_tutorial.test_custom_docs_ui.test_tutorial001.client",
+        "tests.test_tutorial.test_custom_docs_ui.test_tutorial002.client",
+        "tests.test_tutorial.test_static_files.test_tutorial001.client",
+        "tests.benchmarks.test_general_performance.client",
+        "fastapi.openapi.models.OpenAPI"
+      ],
+      "gold_files": [
+        "fastapi/applications.py",
+        "fastapi/openapi/docs.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14978",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 3,
+      "n_gold_symbols": 7,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.02857142857142857,
+      "seeds": [],
+      "gold_files": [
+        "docs_src/strict_content_type/tutorial001_py310.py",
+        "fastapi/applications.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7505",
+      "repo": "psf/requests",
+      "n_gold_files": 2,
+      "n_gold_symbols": 4,
+      "n_seeds": 5,
+      "n_ctx": 8,
+      "ctx_chars": 7411,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.5,
+      "rand_task_hit_rate": 1.0,
+      "rand_symbol_recall": 0.05,
+      "seeds": [
+        "requests.sessions.Session.put",
+        "requests._types.SupportsRead",
+        "requests._types.SupportsRead.read",
+        "requests.api.put",
+        "tests.test_requests.TestStream.read"
+      ],
+      "gold_files": [
+        "src/requests/_types.py",
+        "src/requests/models.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7502",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 3,
+      "n_ctx": 8,
+      "ctx_chars": 5611,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.6,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.2,
+      "seeds": [
+        "requests.models.RequestEncodingMixin._encode_files",
+        "requests.structures.LookupDict.__getattr__",
+        "tests.test_requests.AttrProxy.__getattr__"
+      ],
+      "gold_files": [
+        "src/requests/models.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7433",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 7,
+      "n_ctx": 16,
+      "ctx_chars": 15915,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.8,
+      "rand_task_hit_rate": 0.8,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "requests.cookies.RequestsCookieJar.__iter__",
+        "requests.structures.CaseInsensitiveDict.__iter__",
+        "requests.structures.LookupDict.__getattr__",
+        "requests.models.PreparedRequest.prepare_body",
+        "requests.models.Response.__iter__",
+        "tests.test_requests.CustomMapping.__iter__",
+        "tests.test_requests.BadFileObj.__iter__"
+      ],
+      "gold_files": [
+        "src/requests/models.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7427",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 2,
+      "ctx_chars": 1243,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.4,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_utils.TestGetEnvironProxies.no_proxy"
+      ],
+      "gold_files": [
+        "src/requests/utils.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7315",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 22,
+      "ctx_chars": 20705,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.4,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "requests.cookies.RequestsCookieJar.get",
+        "requests.cookies.RequestsCookieJar.keys",
+        "requests.models.RequestEncodingMixin.path_url",
+        "requests.adapters.HTTPAdapter.request_url",
+        "requests.api.request",
+        "requests.api.get",
+        "requests.structures.LookupDict.get",
+        "requests.sessions.Session.request"
+      ],
+      "gold_files": [
+        "src/requests/adapters.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7328",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 6,
+      "n_ctx": 131,
+      "ctx_chars": 81753,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 1.0,
+      "rand_task_hit_rate": 1.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "requests.adapters.BaseAdapter.send",
+        "requests.adapters.HTTPAdapter.send",
+        "requests.sessions.Session",
+        "requests.sessions.Session.send",
+        "requests.models.Response",
+        "tests.test_requests.RedirectSession.send"
+      ],
+      "gold_files": [
+        "src/requests/sessions.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7309",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 3,
+      "ctx_chars": 1531,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.4,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "requests.utils._parse_content_type_header"
+      ],
+      "gold_files": [
+        "src/requests/utils.py"
+      ]
+    },
+    {
+      "instance_id": "requests_7205",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 2,
+      "n_ctx": 11,
+      "ctx_chars": 12817,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "requests.api.request",
+        "requests.sessions.Session.request"
+      ],
+      "gold_files": [
+        "src/requests/utils.py"
+      ]
+    },
+    {
+      "instance_id": "rich_4070",
+      "repo": "Textualize/rich",
+      "n_gold_files": 9,
+      "n_gold_symbols": 18,
+      "n_seeds": 8,
+      "n_ctx": 401,
+      "ctx_chars": 254949,
+      "lex_file_hits": 3,
+      "lex_symbol_hits": 13,
+      "rand_file_recall": 0.24444444444444446,
+      "rand_task_hit_rate": 1.0,
+      "rand_symbol_recall": 0.1,
+      "seeds": [
+        "rich.console.ConsoleOptions",
+        "rich.console.ConsoleRenderable",
+        "rich.console.Console",
+        "rich.console.Console.print",
+        "rich.console.Console.log",
+        "rich.console.Console.input",
+        "rich.console._svg_hash",
+        "rich.logging.RichHandler"
+      ],
+      "gold_files": [
+        "rich/_emoji_replace.py",
+        "rich/console.py",
+        "rich/emoji.py",
+        "rich/logging.py",
+        "rich/protocol.py",
+        "rich/repr.py",
+        "rich/segment.py",
+        "rich/syntax.py",
+        "rich/theme.py"
+      ]
+    },
+    {
+      "instance_id": "rich_4077",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 4,
+      "n_ctx": 8,
+      "ctx_chars": 3153,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_console.FakeTTY.isatty",
+        "tests.test_console.FakeFile.isatty",
+        "rich._null_file.NullFile.isatty",
+        "rich.progress._Reader.isatty"
+      ],
+      "gold_files": [
+        "rich/file_proxy.py"
+      ]
+    },
+    {
+      "instance_id": "rich_4079",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/markdown.py"
+      ]
+    },
+    {
+      "instance_id": "rich_4076",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/ansi.py"
+      ]
+    },
+    {
+      "instance_id": "rich_4075",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.4,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/console.py"
+      ]
+    },
+    {
+      "instance_id": "rich_4006",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 1,
+      "n_ctx": 6,
+      "ctx_chars": 7077,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.cells.split_graphemes"
+      ],
+      "gold_files": [
+        "rich/cells.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14258",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14851",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 4,
+      "n_seeds": 3,
+      "n_ctx": 115,
+      "ctx_chars": 544969,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.05,
+      "seeds": [
+        "fastapi.applications.FastAPI",
+        "fastapi.applications.FastAPI.on_event",
+        "fastapi.routing.APIRouter.on_event"
+      ],
+      "gold_files": [
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14873",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 16,
+      "ctx_chars": 1238,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.6,
+      "seeds": [
+        "tests.test_dependency_yield_scope.Session.__init__",
+        "tests.test_dependency_yield_scope.NamedSession.__init__",
+        "tests.test_dependency_wrapped.ClassDep.__init__",
+        "tests.test_dependency_after_yield_websockets.Session.__init__",
+        "tests.test_arbitrary_types.FakeNumpyArray.__init__",
+        "tests.test_jsonable_encoder.Person.__init__",
+        "tests.test_jsonable_encoder.Pet.__init__",
+        "tests.test_validation_error_context.ExceptionCapture.__init__"
+      ],
+      "gold_files": [
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13920",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14794",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 7,
+      "n_ctx": 25,
+      "ctx_chars": 20983,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_pydantic_v1_error.endpoint",
+        "tests.test_dependency_duplicates.dependency",
+        "tests.test_security_scopes.endpoint",
+        "fastapi.params.Depends",
+        "fastapi.param_functions.Depends",
+        "fastapi.openapi.models.Response",
+        "fastapi.dependencies.utils.analyze_param"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14786",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 8,
+      "ctx_chars": 1066,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "security.tutorial006_an_py39.read_current_user",
+        "security.tutorial006_py39.read_current_user",
+        "security.tutorial007_an_py39.read_current_user",
+        "security.tutorial007_py39.read_current_user",
+        "tests.test_security_http_base_description.read_current_user",
+        "tests.test_security_http_digest_description.read_current_user",
+        "tests.test_security_oauth2.read_current_user",
+        "tests.test_security_openid_connect.read_current_user"
+      ],
+      "gold_files": [
+        "fastapi/security/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14492",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 1,
+      "n_ctx": 1,
+      "ctx_chars": 97,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [
+        "tests.test_schema_extra_examples.example"
+      ],
+      "gold_files": [
+        "docs_src/metadata/tutorial001_1_py39.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14479",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 122,
+      "ctx_chars": 576415,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "scripts.docs.VisibleTextExtractor.__init__",
+        "fastapi.applications.FastAPI",
+        "fastapi.applications.FastAPI.__init__",
+        "fastapi.applications.FastAPI.get",
+        "fastapi.params.Param.__init__",
+        "fastapi.params.Path.__init__",
+        "fastapi.params.Query",
+        "fastapi.params.Query.__init__"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14463",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 12,
+      "ctx_chars": 1233,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_filter_pydantic_sub_model_pv2.ModelB",
+        "tests.test_filter_pydantic_sub_model_pv2.ModelA",
+        "tests.test_additional_responses_response_class.Error",
+        "tests.test_additional_responses_custom_validationerror.Error",
+        "tests.test_wrapped_method_forward_reference.method",
+        "tests.test_arbitrary_types.test",
+        "tests.test_response_class_no_mediatype.Error",
+        "tests.test_openapi_examples.examples"
+      ],
+      "gold_files": [
+        "fastapi/openapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_12942",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 102,
+      "ctx_chars": 575331,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.param_functions.Body",
+        "fastapi.routing.APIRouter.get",
+        "fastapi.routing.APIRouter.post",
+        "fastapi.params.Body",
+        "fastapi.applications.FastAPI",
+        "fastapi.applications.FastAPI.get",
+        "fastapi.applications.FastAPI.post",
+        "fastapi.openapi.models.Discriminator"
+      ],
+      "gold_files": [
+        "fastapi/_compat.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14099",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 5,
+      "n_gold_symbols": 3,
+      "n_seeds": 2,
+      "n_ctx": 9,
+      "ctx_chars": 134036,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.06666666666666667,
+      "seeds": [
+        "fastapi.applications.FastAPI.middleware",
+        "fastapi.datastructures.UploadFile"
+      ],
+      "gold_files": [
+        "docs_src/dependencies/tutorial013_an_py310.py",
+        "docs_src/dependencies/tutorial014_an_py310.py",
+        "fastapi/applications.py",
+        "fastapi/middleware/asyncexitstack.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14609",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 20,
+      "n_gold_symbols": 38,
+      "n_seeds": 1,
+      "n_ctx": 106,
+      "ctx_chars": 432437,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.applications.FastAPI"
+      ],
+      "gold_files": [
+        "docs_src/request_form_models/tutorial002_pv1_an_py39.py",
+        "docs_src/request_form_models/tutorial002_pv1_py39.py",
+        "fastapi/_compat/__init__.py",
+        "fastapi/_compat/main.py",
+        "fastapi/_compat/may_v1.py",
+        "fastapi/_compat/model_field.py",
+        "fastapi/_compat/shared.py",
+        "fastapi/_compat/v1.py",
+        "fastapi/_compat/v2.py",
+        "fastapi/datastructures.py",
+        "fastapi/dependencies/utils.py",
+        "fastapi/encoders.py",
+        "fastapi/exceptions.py",
+        "fastapi/openapi/models.py",
+        "fastapi/openapi/utils.py",
+        "fastapi/param_functions.py",
+        "fastapi/params.py",
+        "fastapi/routing.py",
+        "fastapi/temp_pydantic_v1_params.py",
+        "fastapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14372",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 5,
+      "n_ctx": 95,
+      "ctx_chars": 426670,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.1,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.2,
+      "seeds": [
+        "fastapi.applications.FastAPI",
+        "fastapi.param_functions.Depends",
+        "fastapi.param_functions.Security",
+        "fastapi.params.Depends",
+        "fastapi.params.Security"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py",
+        "fastapi/params.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14349",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 4,
+      "ctx_chars": 565,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.openapi.models.Schema"
+      ],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14512",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 3,
+      "n_ctx": 22,
+      "ctx_chars": 31727,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.param_functions.Body",
+        "fastapi.params.Body",
+        "fastapi.temp_pydantic_v1_params.Body"
+      ],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14487",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 2,
+      "ctx_chars": 380,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.exceptions.ValidationException.errors"
+      ],
+      "gold_files": [
+        "docs_src/handling_errors/tutorial004.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_11355",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14485",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14482",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 3,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14306",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 5,
+      "n_seeds": 8,
+      "n_ctx": 9,
+      "ctx_chars": 2208,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.1,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_compat_params_v1.create_item",
+        "tests.test_openapi_separate_input_output_schemas.create_item",
+        "tests.test_security_scopes.get_user",
+        "tests.test_security_scopes.endpoint",
+        "tests.test_params_repr.get_user",
+        "tests.test_dependency_contextvars.get_user",
+        "tests.test_infer_param_optionality.get_user",
+        "tests.test_wrapped_method_forward_reference.method"
+      ],
+      "gold_files": [
+        "fastapi/exceptions.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14458",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 3,
+      "n_seeds": 8,
+      "n_ctx": 109,
+      "ctx_chars": 430445,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 3,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "dependencies.tutorial011.FixedContentQueryChecker.__call__",
+        "dependencies.tutorial011_an_py39.FixedContentQueryChecker.__call__",
+        "dependencies.tutorial011_an.FixedContentQueryChecker.__call__",
+        "fastapi.applications.FastAPI",
+        "fastapi.dependencies.models.Dependant.is_gen_callable",
+        "fastapi.dependencies.models.Dependant.is_async_gen_callable",
+        "fastapi.dependencies.models.Dependant.is_coroutine_callable",
+        "tests.test_dependency_duplicates.dependency"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/models.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14459",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 3,
+      "n_gold_symbols": 6,
+      "n_seeds": 8,
+      "n_ctx": 20,
+      "ctx_chars": 14281,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.06666666666666667,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.responses.UJSONResponse.render",
+        "fastapi.responses.ORJSONResponse.render",
+        "fastapi.security.oauth2.OAuth2",
+        "fastapi.openapi.models.OAuth2",
+        "fastapi.openapi.models.OpenAPI",
+        "tests.test_default_response_class.ORJSONResponse.render",
+        "tests.test_dependency_duplicates.dependency",
+        "custom_response.tutorial009c.CustomORJSONResponse.render"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/models.py",
+        "fastapi/dependencies/utils.py",
+        "fastapi/openapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14448",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 8,
+      "n_ctx": 25,
+      "ctx_chars": 25132,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_dependency_wrapped.wrapper",
+        "tests.test_callable_endpoint.main",
+        "tests.test_router_events.main",
+        "scripts.people.main",
+        "scripts.deploy_docs_status.main",
+        "scripts.notify_translations.main",
+        "scripts.sponsors.main",
+        "scripts.topic_repos.main"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/models.py",
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14455",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 3,
+      "n_ctx": 11,
+      "ctx_chars": 12683,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.openapi.models.OAuth2",
+        "fastapi.openapi.models.OpenAPI",
+        "fastapi.security.oauth2.OAuth2"
+      ],
+      "gold_files": [
+        "fastapi/openapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_9753",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/dependencies/models.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14430",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_5077",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 8,
+      "n_ctx": 15,
+      "ctx_chars": 1830,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_inherited_custom_class.MyUuid.__init__",
+        "tests.test_security_scopes.endpoint",
+        "tests.test_dependency_yield_scope_websockets.Session.__init__",
+        "tests.test_dependency_yield_scope_websockets.NamedSession.__init__",
+        "tests.test_dependency_yield_scope.Session.__init__",
+        "tests.test_dependency_yield_scope.NamedSession.__init__",
+        "tests.test_dependency_after_yield_websockets.Session.__init__",
+        "tests.test_custom_middleware_exception.ContentSizeLimitMiddleware.__init__"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_9555",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 12,
+      "ctx_chars": 998,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_jsonable_encoder.Person.__init__",
+        "tests.test_jsonable_encoder.Pet.__init__",
+        "tests.test_dependency_after_yield_websockets.Session.__init__",
+        "tests.test_openapi_model_description_trim_on_formfeed.foo",
+        "tests.test_openapi_servers.foo",
+        "tests.test_custom_schema_fields.foo",
+        "tests.test_schema_extra_examples.example",
+        "tests.test_dependency_after_yield_streaming.Session.__init__"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/models.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14361",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13207",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 2,
+      "n_ctx": 97,
+      "ctx_chars": 427785,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.applications.FastAPI",
+        "fastapi.openapi.models.OpenAPI"
+      ],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14360",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 32,
+      "ctx_chars": 52013,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "graphql.tutorial001.Query",
+        "fastapi.datastructures.UploadFile.validate",
+        "fastapi.params.Query",
+        "fastapi.params.Header",
+        "fastapi.params.Cookie",
+        "fastapi.param_functions.Query",
+        "fastapi.param_functions.Header",
+        "fastapi.param_functions.Cookie"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14356",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 8,
+      "ctx_chars": 272,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "cookie_param_models.tutorial001_an.Cookies",
+        "cookie_param_models.tutorial001.Cookies",
+        "cookie_param_models.tutorial002.Cookies",
+        "cookie_param_models.tutorial002_an.Cookies",
+        "cookie_param_models.tutorial002_an_py39.Cookies",
+        "cookie_param_models.tutorial002_pv1_an_py39.Cookies",
+        "cookie_param_models.tutorial002_py310.Cookies",
+        "cookie_param_models.tutorial002_pv1_an_py310.Cookies"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_5624",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14419",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 4,
+      "n_seeds": 2,
+      "n_ctx": 3,
+      "ctx_chars": 1488,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_dependency_duplicates.dependency",
+        "fastapi.security.oauth2.SecurityScopes"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/models.py",
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14301",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 22,
+      "ctx_chars": 125478,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "graphql.tutorial001.Query.user",
+        "tests.test_compat.func",
+        "tests.test_dependency_duplicates.dependency",
+        "fastapi.routing.APIRoute",
+        "fastapi.routing.APIRouter.route",
+        "fastapi.params.Depends",
+        "fastapi.param_functions.Depends",
+        "fastapi.dependencies.utils.get_parameterless_sub_dependant"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14262",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 10,
+      "n_gold_symbols": 11,
+      "n_seeds": 8,
+      "n_ctx": 12,
+      "ctx_chars": 6970,
+      "lex_file_hits": 2,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.02,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.05454545454545454,
+      "seeds": [
+        "custom_response.tutorial008.main",
+        "fastapi.params.Depends",
+        "fastapi.params.Security",
+        "fastapi.param_functions.Depends",
+        "fastapi.param_functions.Security",
+        "fastapi.cli.main",
+        "fastapi._compat.v2.ModelField.default",
+        "fastapi._compat.model_field.ModelField.default"
+      ],
+      "gold_files": [
+        "docs_src/dependencies/tutorial008e.py",
+        "docs_src/dependencies/tutorial008e_an.py",
+        "docs_src/dependencies/tutorial008e_an_py39.py",
+        "fastapi/dependencies/models.py",
+        "fastapi/dependencies/utils.py",
+        "fastapi/exceptions.py",
+        "fastapi/param_functions.py",
+        "fastapi/params.py",
+        "fastapi/routing.py",
+        "fastapi/types.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14266",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 3,
+      "ctx_chars": 3858,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.openapi.models.OpenAPI"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14246",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14186",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 10,
+      "n_gold_symbols": 29,
+      "n_seeds": 1,
+      "n_ctx": 3,
+      "ctx_chars": 206,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "graphql.tutorial001.Query.user"
+      ],
+      "gold_files": [
+        "fastapi/_compat/__init__.py",
+        "fastapi/_compat/main.py",
+        "fastapi/_compat/may_v1.py",
+        "fastapi/_compat/shared.py",
+        "fastapi/_compat/v1.py",
+        "fastapi/_compat/v2.py",
+        "fastapi/dependencies/utils.py",
+        "fastapi/encoders.py",
+        "fastapi/temp_pydantic_v1_params.py",
+        "fastapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_9425",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 2,
+      "ctx_chars": 110463,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.routing.APIRouter.route"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13713",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 3,
+      "n_seeds": 8,
+      "n_ctx": 106,
+      "ctx_chars": 553084,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.3,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.applications.FastAPI",
+        "fastapi.applications.FastAPI.__init__",
+        "fastapi.routing.APIWebSocketRoute.__init__",
+        "fastapi.routing.APIRoute.__init__",
+        "fastapi.routing.APIRouter.__init__",
+        "fastapi.exceptions.HTTPException.__init__",
+        "fastapi.exceptions.WebSocketException.__init__",
+        "fastapi.exceptions.ValidationException.__init__"
+      ],
+      "gold_files": [
+        "fastapi/applications.py",
+        "fastapi/openapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14077",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 3,
+      "n_gold_symbols": 2,
+      "n_seeds": 1,
+      "n_ctx": 83,
+      "ctx_chars": 405777,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.applications.FastAPI"
+      ],
+      "gold_files": [
+        "docs_src/handling_errors/tutorial005.py",
+        "fastapi/exception_handlers.py",
+        "fastapi/openapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3718",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 6,
+      "n_ctx": 43,
+      "ctx_chars": 37690,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 2,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.2,
+      "seeds": [
+        "rich.control.Control.title",
+        "rich.live._RefreshThread.run",
+        "rich.color.Color.default",
+        "rich.progress._TrackThread.run",
+        "rich.panel.Panel",
+        "tools.make_terminal_widths.run"
+      ],
+      "gold_files": [
+        "rich/panel.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3934",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/live.py",
+        "rich/live_render.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3953",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/cells.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3944",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/cells.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3942",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 3,
+      "n_seeds": 1,
+      "n_ctx": 14,
+      "ctx_chars": 29918,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 2,
+      "rand_file_recall": 0.1,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.06666666666666667,
+      "seeds": [
+        "rich.markdown.Markdown"
+      ],
+      "gold_files": [
+        "rich/default_styles.py",
+        "rich/markdown.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3938",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 1,
+      "n_ctx": 5,
+      "ctx_chars": 11738,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.1,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.text.Text.wrap"
+      ],
+      "gold_files": [
+        "rich/console.py",
+        "rich/segment.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3882",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 27,
+      "ctx_chars": 23887,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.color.Color.default",
+        "rich.prompt.PromptBase",
+        "rich.prompt.PromptBase.ask",
+        "rich.prompt.PromptBase.on_validate_error",
+        "rich.status.Status.console",
+        "rich.text.Text.markup",
+        "rich.live._RefreshThread.run",
+        "rich.progress._TrackThread.run"
+      ],
+      "gold_files": [
+        "rich/prompt.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3894",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 29,
+      "ctx_chars": 37269,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.inspect",
+        "rich.color.Color.default",
+        "rich.pretty.install",
+        "rich.console.Console.clear",
+        "rich.containers.Lines.extend",
+        "rich.text.Span.extend",
+        "rich.traceback.install",
+        "rich.control.Control.clear"
+      ],
+      "gold_files": [
+        "rich/_inspect.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3935",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 5,
+      "n_seeds": 2,
+      "n_ctx": 5,
+      "ctx_chars": 18489,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.console.Console.width",
+        "rich.table.Table.padding"
+      ],
+      "gold_files": [
+        "rich/table.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3905",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 35,
+      "ctx_chars": 60058,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.6,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.live._RefreshThread.stop",
+        "rich.live._RefreshThread.run",
+        "rich.live.Live.start",
+        "rich.live.Live.stop",
+        "rich.segment.Segment.line",
+        "rich.color.Color.default",
+        "rich.console.Console.line",
+        "rich.console.Console.clear"
+      ],
+      "gold_files": [
+        "rich/progress.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3930",
+      "repo": "Textualize/rich",
+      "n_gold_files": 26,
+      "n_gold_symbols": 2,
+      "n_seeds": 8,
+      "n_ctx": 38,
+      "ctx_chars": 43787,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.007692307692307693,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.measure.Measurement.get",
+        "rich.progress.Task.speed",
+        "rich.progress.Progress.advance",
+        "rich.text.Span.split",
+        "rich.text.Text.split",
+        "rich.console.Capture.get",
+        "rich.console.Console.width",
+        "rich.layout.Layout.get"
+      ],
+      "gold_files": [
+        "rich/__main__.py",
+        "rich/_cell_widths.py",
+        "rich/_unicode_data/__init__.py",
+        "rich/_unicode_data/_versions.py",
+        "rich/_unicode_data/unicode10-0-0.py",
+        "rich/_unicode_data/unicode11-0-0.py",
+        "rich/_unicode_data/unicode12-0-0.py",
+        "rich/_unicode_data/unicode12-1-0.py",
+        "rich/_unicode_data/unicode13-0-0.py",
+        "rich/_unicode_data/unicode14-0-0.py",
+        "rich/_unicode_data/unicode15-0-0.py",
+        "rich/_unicode_data/unicode15-1-0.py",
+        "rich/_unicode_data/unicode16-0-0.py",
+        "rich/_unicode_data/unicode17-0-0.py",
+        "rich/_unicode_data/unicode4-1-0.py",
+        "rich/_unicode_data/unicode5-0-0.py",
+        "rich/_unicode_data/unicode5-1-0.py",
+        "rich/_unicode_data/unicode5-2-0.py",
+        "rich/_unicode_data/unicode6-0-0.py",
+        "rich/_unicode_data/unicode6-1-0.py",
+        "rich/_unicode_data/unicode6-2-0.py",
+        "rich/_unicode_data/unicode6-3-0.py",
+        "rich/_unicode_data/unicode7-0-0.py",
+        "rich/_unicode_data/unicode8-0-0.py",
+        "rich/_unicode_data/unicode9-0-0.py",
+        "rich/cells.py"
+      ]
+    },
+    {
+      "instance_id": "httpx_3672",
+      "repo": "encode/httpx",
+      "n_gold_files": 7,
+      "n_gold_symbols": 9,
+      "n_seeds": 8,
+      "n_ctx": 56,
+      "ctx_chars": 41244,
+      "lex_file_hits": 4,
+      "lex_symbol_hits": 4,
+      "rand_file_recall": 0.19999999999999998,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.08888888888888888,
+      "seeds": [
+        "httpx._network.NetworkStream.read",
+        "httpx._client.Client.request",
+        "httpx._parsers.HTTPParser",
+        "httpx._parsers.HTTPParser.complete",
+        "httpx._parsers.ReadAheadParser.read",
+        "httpx._request.Request.read",
+        "httpx._response.Response.read",
+        "httpx._streams.Stream.read"
+      ],
+      "gold_files": [
+        "src/ahttpx/_parsers.py",
+        "src/ahttpx/_pool.py",
+        "src/ahttpx/_server.py",
+        "src/httpx/_network.py",
+        "src/httpx/_parsers.py",
+        "src/httpx/_pool.py",
+        "src/httpx/_server.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14791",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 8,
+      "n_ctx": 13,
+      "ctx_chars": 137537,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [
+        "fastapi.applications.FastAPI.openapi",
+        "fastapi.openapi.models.OpenAPI",
+        "tests.test_arbitrary_types.test",
+        "tests.test_tutorial.test_background_tasks.test_tutorial001.test",
+        "tests.test_tutorial.test_background_tasks.test_tutorial002.test",
+        "tests.test_tutorial.test_header_params.test_tutorial003.test",
+        "tests.test_tutorial.test_header_params.test_tutorial001.test",
+        "tests.test_tutorial.test_header_params.test_tutorial002.test"
+      ],
+      "gold_files": [
+        "fastapi/openapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15800",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 8,
+      "n_gold_symbols": 9,
+      "n_seeds": 8,
+      "n_ctx": 26,
+      "ctx_chars": 22402,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.1,
+      "rand_task_hit_rate": 0.8,
+      "rand_symbol_recall": 0.04444444444444444,
+      "seeds": [
+        "custom_response.tutorial008_py310.main",
+        "fastapi.cli.main",
+        "fastapi.openapi.models.Link",
+        "scripts.contributors.main",
+        "scripts.add_latest_release_date.main",
+        "scripts.deploy_docs_status.main",
+        "scripts.people.main",
+        "scripts.sponsors.main"
+      ],
+      "gold_files": [
+        "docs_src/frontend/tutorial001_py310.py",
+        "docs_src/frontend/tutorial002_py310.py",
+        "docs_src/frontend/tutorial003_py310.py",
+        "docs_src/frontend/tutorial004_py310.py",
+        "docs_src/frontend/tutorial005_py310.py",
+        "docs_src/frontend/tutorial006_py310.py",
+        "fastapi/applications.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15785",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 4,
+      "n_seeds": 8,
+      "n_ctx": 30,
+      "ctx_chars": 31454,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "scripts.contributors.main",
+        "scripts.notify_translations.main",
+        "scripts.sponsors.main",
+        "scripts.topic_repos.main",
+        "scripts.deploy_docs_status.main",
+        "scripts.add_latest_release_date.main",
+        "scripts.people.main",
+        "tests.test_callable_endpoint.main"
+      ],
+      "gold_files": [
+        "fastapi/openapi/utils.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14371",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 4,
+      "n_gold_symbols": 9,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/_compat/v2.py",
+        "fastapi/dependencies/utils.py",
+        "fastapi/openapi/utils.py",
+        "fastapi/params.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14605",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 7,
+      "n_gold_symbols": 4,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/dependencies/utils.py",
+        "fastapi/exceptions.py",
+        "fastapi/openapi/utils.py",
+        "fastapi/params.py",
+        "fastapi/routing.py",
+        "fastapi/temp_pydantic_v1_params.py",
+        "fastapi/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15763",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 23,
+      "ctx_chars": 20419,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.4,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.cli.main",
+        "fastapi.openapi.models.Link",
+        "tests.test_router_events.main",
+        "tests.test_callable_endpoint.main",
+        "custom_response.tutorial008_py310.main",
+        "scripts.deploy_docs_status.main",
+        "scripts.people.main",
+        "scripts.notify_translations.main"
+      ],
+      "gold_files": [
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14583",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.2,
+      "seeds": [],
+      "gold_files": [
+        "fastapi/dependencies/utils.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_15745",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 4,
+      "n_gold_symbols": 12,
+      "n_seeds": 8,
+      "n_ctx": 16,
+      "ctx_chars": 11155,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.05,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.016666666666666666,
+      "seeds": [
+        "custom_response.tutorial008_py310.main",
+        "tests.test_callable_endpoint.main",
+        "tests.test_router_events.main",
+        "tests.test_schema_extra_examples.example",
+        "scripts.add_latest_release_date.main",
+        "scripts.topic_repos.main",
+        "scripts.deploy_docs_status.main",
+        "scripts.sponsors.main"
+      ],
+      "gold_files": [
+        "docs_src/path_operation_advanced_configuration/tutorial002_py310.py",
+        "fastapi/applications.py",
+        "fastapi/openapi/utils.py",
+        "fastapi/routing.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14297",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 8,
+      "ctx_chars": 2302,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_tutorial.test_header_params.test_tutorial003.test",
+        "tests.test_tutorial.test_header_params.test_tutorial001.test",
+        "tests.test_tutorial.test_header_params.test_tutorial002.test",
+        "tests.test_tutorial.test_custom_docs_ui.test_tutorial001.client",
+        "tests.test_tutorial.test_custom_docs_ui.test_tutorial002.client",
+        "tests.test_tutorial.test_cookie_params.test_tutorial001.test",
+        "tests.test_tutorial.test_background_tasks.test_tutorial001.test",
+        "tests.test_tutorial.test_background_tasks.test_tutorial002.test"
+      ],
+      "gold_files": [
+        "fastapi/_compat/v2.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14303",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 109,
+      "ctx_chars": 470013,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.6,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "graphql.tutorial001.Query",
+        "fastapi.param_functions.Query",
+        "fastapi.param_functions.Header",
+        "fastapi.param_functions.Cookie",
+        "fastapi.param_functions.Form",
+        "fastapi.applications.FastAPI",
+        "fastapi.applications.FastAPI.get",
+        "fastapi.applications.FastAPI.post"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13537",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 5,
+      "n_ctx": 10,
+      "ctx_chars": 6835,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.dependencies.utils._get_multidict_value",
+        "fastapi.dependencies.utils.request_params_to_args",
+        "fastapi._compat.v2.ModelField.default",
+        "fastapi._compat.model_field.ModelField.default",
+        "tests.test_schema_extra_examples.example"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14953",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 4,
+      "n_gold_symbols": 1,
+      "n_seeds": 2,
+      "n_ctx": 6,
+      "ctx_chars": 4395,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.openapi.models.Schema",
+        "fastapi.openapi.models.OpenAPI"
+      ],
+      "gold_files": [
+        "docs_src/json_base64_bytes/tutorial001_py310.py",
+        "fastapi/_compat/v2.py",
+        "fastapi/datastructures.py",
+        "scripts/playwright/json_base64_bytes/image01.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13786",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 11,
+      "n_gold_symbols": 5,
+      "n_seeds": 8,
+      "n_ctx": 12,
+      "ctx_chars": 2899,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.01818181818181818,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.08,
+      "seeds": [
+        "dependencies.tutorial014_an_py310.generate",
+        "dependencies.tutorial013_an_py310.generate",
+        "tests.test_schema_extra_examples.examples",
+        "tests.test_openapi_examples.examples",
+        "fastapi._compat.v2.ModelField.required",
+        "fastapi._compat.v2.ModelField.default",
+        "fastapi._compat.model_field.ModelField.required",
+        "fastapi._compat.model_field.ModelField.default"
+      ],
+      "gold_files": [
+        "docs_src/authentication_error_status_code/tutorial001_an.py",
+        "docs_src/authentication_error_status_code/tutorial001_an_py39.py",
+        "docs_src/security/tutorial003.py",
+        "docs_src/security/tutorial003_an.py",
+        "docs_src/security/tutorial003_an_py310.py",
+        "docs_src/security/tutorial003_an_py39.py",
+        "docs_src/security/tutorial003_py310.py",
+        "fastapi/security/api_key.py",
+        "fastapi/security/http.py",
+        "fastapi/security/oauth2.py",
+        "fastapi/security/open_id_connect_url.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14616",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 128,
+      "ctx_chars": 599333,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.routing.APIRouter.get",
+        "fastapi.routing.APIRouter.post",
+        "fastapi.applications.FastAPI",
+        "fastapi.applications.FastAPI.get",
+        "fastapi.applications.FastAPI.post",
+        "fastapi.param_functions.Form",
+        "fastapi.params.Form",
+        "fastapi.datastructures.UploadFile"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_11194",
+      "repo": "fastapi/fastapi",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 98,
+      "ctx_chars": 449482,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "fastapi.applications.FastAPI",
+        "fastapi.params.Form",
+        "fastapi.params.File",
+        "fastapi.param_functions.Form",
+        "fastapi.param_functions.File",
+        "tests.test_tutorial.test_extending_openapi.test_tutorial001.test",
+        "tests.test_tutorial.test_cookie_params.test_tutorial001.test",
+        "tests.test_tutorial.test_background_tasks.test_tutorial001.test"
+      ],
+      "gold_files": [
+        "fastapi/dependencies/utils.py"
+      ]
+    },
+    {
+      "instance_id": "requests_6757",
+      "repo": "psf/requests",
+      "n_gold_files": 2,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "src/requests/compat.py",
+        "src/requests/utils.py"
+      ]
+    },
+    {
+      "instance_id": "requests_6629",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 2,
+      "n_ctx": 6,
+      "ctx_chars": 4650,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.2,
+      "seeds": [
+        "requests.models.Response.json",
+        "requests.exceptions.JSONDecodeError"
+      ],
+      "gold_files": [
+        "src/requests/exceptions.py"
+      ]
+    },
+    {
+      "instance_id": "requests_6644",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 3,
+      "n_ctx": 13,
+      "ctx_chars": 14033,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "requests.api.request",
+        "requests.sessions.Session.request",
+        "requests.cookies.MockRequest.host"
+      ],
+      "gold_files": [
+        "src/requests/adapters.py"
+      ]
+    },
+    {
+      "instance_id": "requests_6589",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 15,
+      "ctx_chars": 8553,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.4,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "requests.utils.super_len"
+      ],
+      "gold_files": [
+        "src/requests/utils.py"
+      ]
+    },
+    {
+      "instance_id": "requests_6592",
+      "repo": "psf/requests",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [],
+      "gold_files": [
+        "src/requests/status_codes.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3180",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 8,
+      "n_ctx": 36,
+      "ctx_chars": 47666,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.segment.Segment.line",
+        "rich.color.Color.default",
+        "rich.live._RefreshThread.run",
+        "rich.progress._TrackThread.run",
+        "rich.style.StyleStack.current",
+        "rich.palette.Palette.match",
+        "rich.control.Control.move",
+        "rich.text.Span.move"
+      ],
+      "gold_files": [
+        "rich/_wrap.py",
+        "rich/cells.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3486",
+      "repo": "Textualize/rich",
+      "n_gold_files": 3,
+      "n_gold_symbols": 8,
+      "n_seeds": 2,
+      "n_ctx": 8,
+      "ctx_chars": 18372,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.traceback.error",
+        "rich.diagnose.report"
+      ],
+      "gold_files": [
+        "rich/default_styles.py",
+        "rich/syntax.py",
+        "rich/traceback.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3777",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 2,
+      "n_seeds": 5,
+      "n_ctx": 11,
+      "ctx_chars": 15750,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.2,
+      "seeds": [
+        "rich.traceback.bar",
+        "rich.console.Console.file",
+        "rich.console.Console.status",
+        "examples.recursive_error.bar",
+        "tests.test_traceback.bar"
+      ],
+      "gold_files": [
+        "rich/console.py",
+        "rich/diagnose.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3468",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 4,
+      "n_seeds": 1,
+      "n_ctx": 3,
+      "ctx_chars": 147,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_inspect.Foo.broken"
+      ],
+      "gold_files": [
+        "rich/console.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3782",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 6,
+      "n_seeds": 2,
+      "n_ctx": 47,
+      "ctx_chars": 86034,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 5,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.03333333333333333,
+      "seeds": [
+        "rich.syntax.Syntax",
+        "rich.table.Table.padding"
+      ],
+      "gold_files": [
+        "rich/syntax.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3772",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 3,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/traceback.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3296",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 18,
+      "ctx_chars": 20675,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.6,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.8,
+      "seeds": [
+        "tools.make_terminal_widths.test",
+        "tools.make_terminal_widths.run",
+        "rich.live._RefreshThread.run",
+        "rich.scope.test",
+        "rich.table.Table.padding",
+        "rich.progress._TrackThread.run",
+        "rich.tree.Tree.add",
+        "rich.style.Style.color"
+      ],
+      "gold_files": [
+        "rich/syntax.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3675",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 4,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/console.py",
+        "rich/diagnose.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3676",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 5,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/default_styles.py",
+        "rich/traceback.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3518",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 67,
+      "ctx_chars": 64829,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tools.make_terminal_widths.run",
+        "rich.highlighter.Highlighter.highlight",
+        "rich.highlighter.NullHighlighter.highlight",
+        "rich.highlighter.RegexHighlighter.highlight",
+        "rich.highlighter.JSONHighlighter.highlight",
+        "rich.live._RefreshThread.run",
+        "rich.table.Column",
+        "rich.table.Table"
+      ],
+      "gold_files": [
+        "rich/table.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3535",
+      "repo": "Textualize/rich",
+      "n_gold_files": 2,
+      "n_gold_symbols": 1,
+      "n_seeds": 2,
+      "n_ctx": 4,
+      "ctx_chars": 12140,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.1,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.traceback.error",
+        "rich.console.Console.width"
+      ],
+      "gold_files": [
+        "rich/cells.py",
+        "rich/segment.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3521",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 2,
+      "n_ctx": 92,
+      "ctx_chars": 64751,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.segment.Segment",
+        "rich.segment.Segment.split_cells"
+      ],
+      "gold_files": [
+        "rich/segment.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3506",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 6,
+      "n_ctx": 100,
+      "ctx_chars": 78904,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.6,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.layout.Layout.split",
+        "rich.table.Column.cells",
+        "rich.text.Span.split",
+        "rich.text.Text.split",
+        "rich.segment.Segment",
+        "rich.segment.Segment._split_cells"
+      ],
+      "gold_files": [
+        "rich/segment.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3480",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 3,
+      "n_ctx": 8,
+      "ctx_chars": 10277,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.6,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.text.Text.append",
+        "rich.containers.Renderables.append",
+        "rich.containers.Lines.append"
+      ],
+      "gold_files": [
+        "rich/text.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3472",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/pretty.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3454",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 25,
+      "ctx_chars": 25445,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.progress._TrackThread.run",
+        "rich.style.Style.test",
+        "rich.scope.test",
+        "rich.color.Color.default",
+        "rich.highlighter.ReprHighlighter",
+        "rich.live._RefreshThread.run",
+        "tools.make_terminal_widths.test",
+        "tools.make_terminal_widths.run"
+      ],
+      "gold_files": [
+        "rich/highlighter.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3471",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 2,
+      "ctx_chars": 6889,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.text.Text.append_tokens"
+      ],
+      "gold_files": [
+        "rich/text.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3470",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 1,
+      "n_ctx": 3,
+      "ctx_chars": 12731,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.6,
+      "rand_task_hit_rate": 0.6,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.console.Console.capture"
+      ],
+      "gold_files": [
+        "rich/console.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3469",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/markdown.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3052",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 5,
+      "n_seeds": 8,
+      "n_ctx": 20,
+      "ctx_chars": 25180,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 2,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.16,
+      "seeds": [
+        "rich.live._RefreshThread.run",
+        "rich.console.Console.options",
+        "rich.progress._TrackThread.run",
+        "rich.progress._Reader.name",
+        "rich.prompt.PromptBase.ask",
+        "rich.prompt.Prompt",
+        "rich.tree.Tree.add",
+        "rich.color.Color.default"
+      ],
+      "gold_files": [
+        "rich/prompt.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3278",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 8,
+      "n_ctx": 26,
+      "ctx_chars": 18789,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [
+        "rich.file_proxy.FileProxy.write",
+        "rich._null_file.NullFile.write",
+        "rich.color.Color.default",
+        "rich.print",
+        "rich.style.StyleStack.current",
+        "rich.markup.escape",
+        "rich.live._RefreshThread.run",
+        "rich.progress._TrackThread.run"
+      ],
+      "gold_files": [
+        "rich/ansi.py"
+      ]
+    },
+    {
+      "instance_id": "rich_2943",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 5,
+      "n_ctx": 13,
+      "ctx_chars": 9995,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.live._RefreshThread.run",
+        "rich.style.Style.meta",
+        "rich.progress._TrackThread.run",
+        "rich.color.Color.default",
+        "tools.make_terminal_widths.run"
+      ],
+      "gold_files": [
+        "rich/style.py"
+      ]
+    },
+    {
+      "instance_id": "rich_2725",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 44,
+      "ctx_chars": 66329,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 1,
+      "rand_file_recall": 0.4,
+      "rand_task_hit_rate": 0.4,
+      "rand_symbol_recall": 0.2,
+      "seeds": [
+        "rich.progress._TrackThread.run",
+        "rich.segment.Segment.line",
+        "rich.scope.test",
+        "rich.console.Console.line",
+        "rich.box.Box",
+        "rich.live._RefreshThread.run",
+        "rich.tree.Tree.add",
+        "rich.color.Color.default"
+      ],
+      "gold_files": [
+        "rich/table.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3105",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 4,
+      "n_ctx": 11,
+      "ctx_chars": 5269,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [
+        "tools.make_terminal_widths.run",
+        "rich.color.Color.default",
+        "rich.progress._TrackThread.run",
+        "rich.live._RefreshThread.run"
+      ],
+      "gold_files": [
+        "rich/_export_format.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3130",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 8,
+      "n_ctx": 21,
+      "ctx_chars": 15991,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tests.test_inspect.Foo.method",
+        "tools.make_terminal_widths.run",
+        "rich.containers.Renderables.append",
+        "rich.containers.Lines.append",
+        "rich.progress._TrackThread.run",
+        "rich.text.Text.append",
+        "rich.color.Color.default",
+        "rich.markdown.MarkdownElement.on_text"
+      ],
+      "gold_files": [
+        "rich/markdown.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3043",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 0,
+      "n_seeds": 8,
+      "n_ctx": 18,
+      "ctx_chars": 33309,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": null,
+      "seeds": [
+        "rich.progress_bar.ProgressBar.update",
+        "rich.console.ConsoleOptions.update",
+        "rich.console.ScreenContext.update",
+        "rich.console.Console.file",
+        "rich.spinner.Spinner.update",
+        "rich.status.Status.update",
+        "rich.progress.Progress.update",
+        "rich.layout.Layout.update"
+      ],
+      "gold_files": [
+        "rich/_export_format.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3067",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 5,
+      "n_ctx": 13,
+      "ctx_chars": 9858,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.2,
+      "rand_task_hit_rate": 0.2,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "rich.live._RefreshThread.run",
+        "rich.progress._TrackThread.run",
+        "rich.color.Color.default",
+        "rich.style.Style.link",
+        "tools.make_terminal_widths.run"
+      ],
+      "gold_files": [
+        "rich/highlighter.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3006",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 8,
+      "n_ctx": 16,
+      "ctx_chars": 18227,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [
+        "tools.make_terminal_widths.test",
+        "tools.make_terminal_widths.run",
+        "rich.style.Style.__eq__",
+        "rich.style.Style.test",
+        "rich.progress._TrackThread.run",
+        "rich.scope.test",
+        "rich.live._RefreshThread.run",
+        "rich.text.Text.__eq__"
+      ],
+      "gold_files": [
+        "rich/repr.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3064",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 1,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/markdown.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3063",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 2,
+      "n_seeds": 0,
+      "n_ctx": 0,
+      "ctx_chars": 0,
+      "lex_file_hits": 0,
+      "lex_symbol_hits": 0,
+      "rand_file_recall": 0.0,
+      "rand_task_hit_rate": 0.0,
+      "rand_symbol_recall": 0.0,
+      "seeds": [],
+      "gold_files": [
+        "rich/markup.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3061",
+      "repo": "Textualize/rich",
+      "n_gold_files": 1,
+      "n_gold_symbols": 12,
+      "n_seeds": 5,
+      "n_ctx": 204,
+      "ctx_chars": 146201,
+      "lex_file_hits": 1,
+      "lex_symbol_hits": 12,
+      "rand_file_recall": 0.8,
+      "rand_task_hit_rate": 0.8,
+      "rand_symbol_recall": 0.09999999999999999,
+      "seeds": [
+        "rich.console.Console.width",
+        "rich.emoji.Emoji.replace",
+        "rich.text.Text",
+        "rich.text.Text.spans",
+        "tests.test_inspect.Foo.method"
+      ],
+      "gold_files": [
+        "rich/text.py"
+      ]
+    }
+  ],
+  "axiology": {
+    "n": 129,
+    "gold_approved": 129,
+    "test_tamper_rejected": 129,
+    "shim_rejected": 129,
+    "empty_rejected": 129
+  },
+  "metrology": {
+    "repeated_signature_stagnating": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "repeated_signature_hop_radius": [
+      1,
+      1,
+      2,
+      3,
+      3
+    ],
+    "exhausted_after_repeated": true,
+    "varied_signature_stagnating": [
+      false,
+      false,
+      false
+    ],
+    "varied_hop_radius": 1
+  },
+  "gemma": {
+    "model": "gemma4:12b",
+    "n": 12,
+    "base_hits": 3,
+    "ont_hits": 4,
+    "base_abstain": 0,
+    "ont_abstain": 0,
+    "base_unparsed": 0,
+    "ont_unparsed": 0,
+    "base_seconds": 1.7026808845985215,
+    "ont_seconds": 3.319672316831808,
+    "rows": [
+      {
+        "instance_id": "httpx_3672",
+        "repo": "encode/httpx",
+        "gold": "src/ahttpx/_parsers.py, src/ahttpx/_pool.py, src/ahttpx/_server.py, src/httpx/_network.py, src/httpx/_parsers.py, src/httpx/_pool.py, src/httpx/_server.py",
+        "base": "http/parser.py, server.py",
+        "ont": "httpx/_parsers.py",
+        "base_hit": false,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "requests_6589",
+        "repo": "psf/requests",
+        "gold": "src/requests/utils.py",
+        "base": "requests/utils.py",
+        "ont": "requests/utils.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "requests_6592",
+        "repo": "psf/requests",
+        "gold": "src/requests/status_codes.py",
+        "base": "src/models/status_codes.py",
+        "ont": "src/models/status_codes.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "requests_6629",
+        "repo": "psf/requests",
+        "gold": "src/requests/exceptions.py",
+        "base": "requests/exceptions.py",
+        "ont": "requests/exceptions.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "rich_2725",
+        "repo": "Textualize/rich",
+        "gold": "rich/table.py",
+        "base": "table.py",
+        "ont": "rich/box.py",
+        "base_hit": true,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "rich_2943",
+        "repo": "Textualize/rich",
+        "gold": "rich/style.py",
+        "base": "src/meta/cache.py",
+        "ont": "rich/style.py",
+        "base_hit": false,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "rich_3006",
+        "repo": "Textualize/rich",
+        "gold": "rich/repr.py",
+        "base": "src/pytorch/utils._serialization.py",
+        "ont": "rich/progress.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "rich_3043",
+        "repo": "Textualize/rich",
+        "gold": "rich/_export_format.py",
+        "base": "textual/app/export.py, .pre-commit-config.yaml",
+        "ont": "rich/console.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_11194",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/dependencies/utils.py",
+        "base": "fastapi/dependencies.py, fastapi/params.py",
+        "ont": "fastapi/params.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_11355",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/dependencies/utils.py",
+        "base": "typer/utils/types.py",
+        "ont": "typer/utils/types.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_12942",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/_compat.py",
+        "base": "fastapi/dependencies.py",
+        "ont": "fastapi/dependencies.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_13207",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/_compat/v2.py",
+        "base": "fastapi/openapi.py",
+        "ont": "fastapi/openapi.py",
+        "base_hit": false,
+        "ont_hit": false
+      }
+    ],
+    "details": [
+      [
+        {
+          "instance_id": "httpx_3672",
+          "repo": "encode/httpx",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 8.91442043799907,
+          "files": [
+            "http/parser.py",
+            "server.py"
+          ],
+          "gold_files": [
+            "src/ahttpx/_parsers.py",
+            "src/ahttpx/_pool.py",
+            "src/ahttpx/_server.py",
+            "src/httpx/_network.py",
+            "src/httpx/_parsers.py",
+            "src/httpx/_pool.py",
+            "src/httpx/_server.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"http/parser.py\",\n    \"server.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "httpx_3672",
+          "repo": "encode/httpx",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 10.854597075958736,
+          "files": [
+            "httpx/_parsers.py"
+          ],
+          "gold_files": [
+            "src/ahttpx/_parsers.py",
+            "src/ahttpx/_pool.py",
+            "src/ahttpx/_server.py",
+            "src/httpx/_network.py",
+            "src/httpx/_parsers.py",
+            "src/httpx/_pool.py",
+            "src/httpx/_server.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"httpx/_parsers.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "requests_6589",
+          "repo": "psf/requests",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.9680119870463386,
+          "files": [
+            "requests/utils.py"
+          ],
+          "gold_files": [
+            "src/requests/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"requests/utils.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "requests_6589",
+          "repo": "psf/requests",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.1207751409965567,
+          "files": [
+            "requests/utils.py"
+          ],
+          "gold_files": [
+            "src/requests/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"requests/utils.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "requests_6592",
+          "repo": "psf/requests",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.0212038310128264,
+          "files": [
+            "src/models/status_codes.py"
+          ],
+          "gold_files": [
+            "src/requests/status_codes.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"src/models/status_codes.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "requests_6592",
+          "repo": "psf/requests",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.7598434769897722,
+          "files": [
+            "src/models/status_codes.py"
+          ],
+          "gold_files": [
+            "src/requests/status_codes.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"src/models/status_codes.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "requests_6629",
+          "repo": "psf/requests",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.698215953016188,
+          "files": [
+            "requests/exceptions.py"
+          ],
+          "gold_files": [
+            "src/requests/exceptions.py"
+          ],
+          "text": "```json\n{\"files\": [\"requests/exceptions.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "requests_6629",
+          "repo": "psf/requests",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 2.246315667987801,
+          "files": [
+            "requests/exceptions.py"
+          ],
+          "gold_files": [
+            "src/requests/exceptions.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"requests/exceptions.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_2725",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.5833342889673077,
+          "files": [
+            "table.py"
+          ],
+          "gold_files": [
+            "rich/table.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"table.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "rich_2725",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 4.121300422993954,
+          "files": [
+            "rich/box.py"
+          ],
+          "gold_files": [
+            "rich/table.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"rich/box.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_2943",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.9307509009959176,
+          "files": [
+            "src/meta/cache.py"
+          ],
+          "gold_files": [
+            "rich/style.py"
+          ],
+          "text": "```json\n{\"files\": [\"src/meta/cache.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "rich_2943",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.085105973004829,
+          "files": [
+            "rich/style.py"
+          ],
+          "gold_files": [
+            "rich/style.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"rich/style.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_3006",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.0573769160546362,
+          "files": [
+            "src/pytorch/utils._serialization.py"
+          ],
+          "gold_files": [
+            "rich/repr.py"
+          ],
+          "text": "```json\n{\"files\": [\"src/pytorch/utils._serialization.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "rich_3006",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.3868966470472515,
+          "files": [
+            "rich/progress.py"
+          ],
+          "gold_files": [
+            "rich/repr.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"rich/progress.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_3043",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.160676242026966,
+          "files": [
+            "textual/app/export.py",
+            ".pre-commit-config.yaml"
+          ],
+          "gold_files": [
+            "rich/_export_format.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"textual/app/export.py\",\n    \".pre-commit-config.yaml\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "rich_3043",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 2.539889044011943,
+          "files": [
+            "rich/console.py"
+          ],
+          "gold_files": [
+            "rich/_export_format.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"rich/console.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_11194",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.1623666899977252,
+          "files": [
+            "fastapi/dependencies.py",
+            "fastapi/params.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/dependencies.py\",\n    \"fastapi/params.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_11194",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.025539380032569,
+          "files": [
+            "fastapi/params.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/params.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_11355",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.9866348440409638,
+          "files": [
+            "typer/utils/types.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"typer/utils/types.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_11355",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.7260750679997727,
+          "files": [
+            "typer/utils/types.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"typer/utils/types.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_12942",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.9194236510084011,
+          "files": [
+            "fastapi/dependencies.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat.py"
+          ],
+          "text": "```json\n{\"files\": [\"fastapi/dependencies.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "fastapi_12942",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.3900624489760958,
+          "files": [
+            "fastapi/dependencies.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/dependencies.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_13207",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.0297548730159178,
+          "files": [
+            "fastapi/openapi.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/openapi.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_13207",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 2.579667455982417,
+          "files": [
+            "fastapi/openapi.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/openapi.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ]
+    ]
+  }
+}

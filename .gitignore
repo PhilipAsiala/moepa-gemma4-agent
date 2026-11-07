@@ -46,6 +46,8 @@ data/**
 # Local tooling
 .venv/
 
-outputs/
+outputs/**
+!outputs/
+!outputs/microbench.json
 wandb/
 runs/
