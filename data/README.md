@@ -5,11 +5,11 @@ Downloaded from [gemma-4-developer-agent](https://www.kaggle.com/competitions/ge
 | Path | Contents |
 |------|----------|
 | `tasks.jsonl` | 129 public development tasks |
-| `graphs/` | AST multigraph JSON (commit-named + task hardlinks as shipped) |
+| `graphs/` | AST multigraph JSON |
 | `embeddings/` | 256-d node vectors in `.npz` archives |
-| `docker/`, `sandbox/` | Sandbox build shims / setup |
-| `HARNESS_README.md` | Official harness documentation |
+| `snapshots/` | Per-task `.tgz` git trees at `base_commit` (~20 GB) |
+| `docker/`, `sandbox/`, `HARNESS_README.md` | Harness extras |
 
-**Not downloaded here:** `snapshots/` (~20 GB repo archives) and `wheels/`. Add those when you need full offline apply/`pytest` loops.
+**Optional:** `wheels/` for offline dependency installs inside the official sandbox image. Gold-patch apply / syntax / Axiology probes use `scripts/snapshot_probe.py` and do not require wheels.
 
 Do not commit or redistribute these files; use the Kaggle Data tab.

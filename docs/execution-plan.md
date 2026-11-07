@@ -25,14 +25,11 @@ Aim to be competitive for all three Paper Track awards by shipping:
 
 ### Sat–Mon (Nov 7–9) — evidence
 
-- [x] Download public assets (`tasks.jsonl`, graphs, embeddings) into `data/` per [`data-substrate.md`](data-substrate.md) — snapshots/wheels skipped for now
-- [ ] Wire Gemma 4 into `MOEPAGemmaAgent._synthesize_edit`
-- [ ] Run micro-benchmark on **20–30** public tasks:
-  - baseline ReAct
-  - + Ontology
-  - + Ontology + Epistemology
-  - full MOEPA
-- [ ] Fill Section 3 table + headline Abstract / Conclusion sentences in `paper/DRAFT.md`
+- [x] Download public assets (`tasks.jsonl`, graphs, embeddings, snapshots) into `data/`
+- [x] Wire Gemma 4 into `MOEPAGemmaAgent._synthesize_edit` (Ollama / B70)
+- [x] Run micro-benchmark + 30-task Gemma localization + snapshot gold-apply probe
+- [x] Fill Section 3 table + headline Abstract / Conclusion sentences in `paper/DRAFT.md`
+- [ ] Optional: install competition wheels/sandbox for fail-to-pass pytest resolve rate
 
 ### Tue–Wed (Nov 10–11) — polish
 

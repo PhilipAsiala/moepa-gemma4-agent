@@ -3162,15 +3162,15 @@
   },
   "gemma": {
     "model": "gemma4:12b",
-    "n": 12,
-    "base_hits": 3,
-    "ont_hits": 4,
-    "base_abstain": 0,
+    "n": 30,
+    "base_hits": 10,
+    "ont_hits": 14,
+    "base_abstain": 1,
     "ont_abstain": 0,
     "base_unparsed": 0,
     "ont_unparsed": 0,
-    "base_seconds": 1.7026808845985215,
-    "ont_seconds": 3.319672316831808,
+    "base_seconds": 10.97991759722936,
+    "ont_seconds": 10.700416553437632,
     "rows": [
       {
         "instance_id": "httpx_3672",
@@ -3209,19 +3209,46 @@
         "ont_hit": true
       },
       {
+        "instance_id": "requests_6644",
+        "repo": "psf/requests",
+        "gold": "src/requests/adapters.py",
+        "base": "urllib3/connection_pool.py",
+        "ont": "requests/api.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "requests_7205",
+        "repo": "psf/requests",
+        "gold": "src/requests/utils.py",
+        "base": "requests/auth.py",
+        "ont": "requests/sessions.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "requests_7309",
+        "repo": "psf/requests",
+        "gold": "src/requests/utils.py",
+        "base": "utils.py",
+        "ont": "requests/utils.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
         "instance_id": "rich_2725",
         "repo": "Textualize/rich",
         "gold": "rich/table.py",
         "base": "table.py",
-        "ont": "rich/box.py",
+        "ont": "rich/table.py",
         "base_hit": true,
-        "ont_hit": false
+        "ont_hit": true
       },
       {
         "instance_id": "rich_2943",
         "repo": "Textualize/rich",
         "gold": "rich/style.py",
-        "base": "src/meta/cache.py",
+        "base": "meta/cache.py",
         "ont": "rich/style.py",
         "base_hit": false,
         "ont_hit": true
@@ -3230,8 +3257,8 @@
         "instance_id": "rich_3006",
         "repo": "Textualize/rich",
         "gold": "rich/repr.py",
-        "base": "src/pytorch/utils._serialization.py",
-        "ont": "rich/progress.py",
+        "base": "sqlalchemy/models.py",
+        "ont": "rich/scope.py",
         "base_hit": false,
         "ont_hit": false
       },
@@ -3241,6 +3268,60 @@
         "gold": "rich/_export_format.py",
         "base": "textual/app/export.py, .pre-commit-config.yaml",
         "ont": "rich/console.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "rich_3052",
+        "repo": "Textualize/rich",
+        "gold": "rich/prompt.py",
+        "base": "rich/prompt.py",
+        "ont": "rich/prompt.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "rich_3061",
+        "repo": "Textualize/rich",
+        "gold": "rich/text.py",
+        "base": "rich/text.py",
+        "ont": "rich/text.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "rich_3063",
+        "repo": "Textualize/rich",
+        "gold": "rich/markup.py",
+        "base": "rich/console.py",
+        "ont": "rich/console.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "rich_3064",
+        "repo": "Textualize/rich",
+        "gold": "rich/markdown.py",
+        "base": "rich/markdown.py",
+        "ont": "rich/markdown.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "rich_3067",
+        "repo": "Textualize/rich",
+        "gold": "rich/highlighter.py",
+        "base": "fastapi/routing.py",
+        "ont": "rich/text.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "rich_3105",
+        "repo": "Textualize/rich",
+        "gold": "rich/_export_format.py",
+        "base": ".",
+        "ont": "rich/syntax.py",
         "base_hit": false,
         "ont_hit": false
       },
@@ -3267,7 +3348,7 @@
         "repo": "fastapi/fastapi",
         "gold": "fastapi/_compat.py",
         "base": "fastapi/dependencies.py",
-        "ont": "fastapi/dependencies.py",
+        "ont": "fastapi/params.py",
         "base_hit": false,
         "ont_hit": false
       },
@@ -3276,7 +3357,88 @@
         "repo": "fastapi/fastapi",
         "gold": "fastapi/_compat/v2.py",
         "base": "fastapi/openapi.py",
-        "ont": "fastapi/openapi.py",
+        "ont": "fastapi.openapi.utils.generate_schema",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_13537",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/dependencies/utils.py",
+        "base": "fastapi/params.py",
+        "ont": "fastapi/dependencies/utils.py",
+        "base_hit": false,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "fastapi_13920",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/dependencies/utils.py",
+        "base": "src/pydantic/_internal/typing_utils.py",
+        "ont": "src/pydantic/_internal/typing_utils.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_14246",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/_compat/v2.py",
+        "base": "fastapi/models.py, fastapi/openapi.py",
+        "ont": "fastapi/models.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_14258",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/routing.py",
+        "base": "fastapi/routing.py",
+        "ont": "fastapi/routing.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "fastapi_14266",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/dependencies/utils.py",
+        "base": "fastapi/openapi.py",
+        "ont": "fastapi/openapi/utils.py",
+        "base_hit": false,
+        "ont_hit": false
+      },
+      {
+        "instance_id": "fastapi_14297",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/_compat/v2.py",
+        "base": "fastapi/_compat/v2.py",
+        "ont": "fastapi/_compat/v2.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "fastapi_14301",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/dependencies/utils.py",
+        "base": "fastapi/dependencies.py",
+        "ont": "fastapi/dependencies/utils.py",
+        "base_hit": false,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "fastapi_14303",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/dependencies/utils.py",
+        "base": "fastapi/dependencies/utils.py",
+        "ont": "fastapi/dependencies/utils.py",
+        "base_hit": true,
+        "ont_hit": true
+      },
+      {
+        "instance_id": "fastapi_14349",
+        "repo": "fastapi/fastapi",
+        "gold": "fastapi/_compat/v2.py",
+        "base": "fastapi/schema.py",
+        "ont": "fastapi/openapi/models.py",
         "base_hit": false,
         "ont_hit": false
       }
@@ -3291,7 +3453,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 8.91442043799907,
+          "seconds": 0.8750028979848139,
           "files": [
             "http/parser.py",
             "server.py"
@@ -3315,7 +3477,7 @@
           "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 10.854597075958736,
+          "seconds": 3.30451163998805,
           "files": [
             "httpx/_parsers.py"
           ],
@@ -3340,7 +3502,7 @@
           "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 0.9680119870463386,
+          "seconds": 42.3018625319819,
           "files": [
             "requests/utils.py"
           ],
@@ -3357,7 +3519,7 @@
           "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 3.1207751409965567,
+          "seconds": 33.276204806985334,
           "files": [
             "requests/utils.py"
           ],
@@ -3376,7 +3538,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 1.0212038310128264,
+          "seconds": 30.107325305987615,
           "files": [
             "src/models/status_codes.py"
           ],
@@ -3393,7 +3555,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 0.7598434769897722,
+          "seconds": 32.158137606980745,
           "files": [
             "src/models/status_codes.py"
           ],
@@ -3412,7 +3574,7 @@
           "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 0.698215953016188,
+          "seconds": 0.6950584879959933,
           "files": [
             "requests/exceptions.py"
           ],
@@ -3429,7 +3591,7 @@
           "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 2.246315667987801,
+          "seconds": 2.247780292003881,
           "files": [
             "requests/exceptions.py"
           ],
@@ -3441,6 +3603,114 @@
       ],
       [
         {
+          "instance_id": "requests_6644",
+          "repo": "psf/requests",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 19.30076791497413,
+          "files": [
+            "urllib3/connection_pool.py"
+          ],
+          "gold_files": [
+            "src/requests/adapters.py"
+          ],
+          "text": "```json\n{\"files\": [\"urllib3/connection_pool.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "requests_6644",
+          "repo": "psf/requests",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 2.833040466008242,
+          "files": [
+            "requests/api.py"
+          ],
+          "gold_files": [
+            "src/requests/adapters.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"requests/api.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "requests_7205",
+          "repo": "psf/requests",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 45.51235638395883,
+          "files": [
+            "requests/auth.py"
+          ],
+          "gold_files": [
+            "src/requests/utils.py"
+          ],
+          "text": "```json\n{\"files\": [\"requests/auth.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "requests_7205",
+          "repo": "psf/requests",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 35.14642948098481,
+          "files": [
+            "requests/sessions.py"
+          ],
+          "gold_files": [
+            "src/requests/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"requests/sessions.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "requests_7309",
+          "repo": "psf/requests",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 38.71127398498356,
+          "files": [
+            "utils.py"
+          ],
+          "gold_files": [
+            "src/requests/utils.py"
+          ],
+          "text": "```json\n{\"files\": [\"utils.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "requests_7309",
+          "repo": "psf/requests",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 38.06678637303412,
+          "files": [
+            "requests/utils.py"
+          ],
+          "gold_files": [
+            "src/requests/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"requests/utils.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
           "instance_id": "rich_2725",
           "repo": "Textualize/rich",
           "ontology": false,
@@ -3448,7 +3718,7 @@
           "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 1.5833342889673077,
+          "seconds": 1.5144520369940437,
           "files": [
             "table.py"
           ],
@@ -3462,17 +3732,17 @@
           "repo": "Textualize/rich",
           "ontology": true,
           "error": null,
-          "hit": false,
+          "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 4.121300422993954,
+          "seconds": 8.086836539034266,
           "files": [
-            "rich/box.py"
+            "rich/table.py"
           ],
           "gold_files": [
             "rich/table.py"
           ],
-          "text": "```json\n{\n  \"files\": [\"rich/box.py\"],\n  \"abstain\": false\n}\n```"
+          "text": "```json\n{\n  \"files\": [\"rich/table.py\"],\n  \"abstain\": false\n}\n```"
         }
       ],
       [
@@ -3484,14 +3754,14 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 0.9307509009959176,
+          "seconds": 21.151519381965045,
           "files": [
-            "src/meta/cache.py"
+            "meta/cache.py"
           ],
           "gold_files": [
             "rich/style.py"
           ],
-          "text": "```json\n{\"files\": [\"src/meta/cache.py\"], \"abstain\": false}\n```"
+          "text": "```json\n{\"files\": [\"meta/cache.py\"], \"abstain\": false}\n```"
         },
         {
           "instance_id": "rich_2943",
@@ -3501,14 +3771,14 @@
           "hit": true,
           "abstain": false,
           "parsed": true,
-          "seconds": 3.085105973004829,
+          "seconds": 20.3238835860393,
           "files": [
             "rich/style.py"
           ],
           "gold_files": [
             "rich/style.py"
           ],
-          "text": "```json\n{\n  \"files\": [\"rich/style.py\"],\n  \"abstain\": false\n}\n```"
+          "text": "```json\n{\n  \"files\": [\n    \"rich/style.py\"\n  ],\n  \"abstain\": false\n}\n```"
         }
       ],
       [
@@ -3520,14 +3790,14 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 1.0573769160546362,
+          "seconds": 47.12314419395989,
           "files": [
-            "src/pytorch/utils._serialization.py"
+            "sqlalchemy/models.py"
           ],
           "gold_files": [
             "rich/repr.py"
           ],
-          "text": "```json\n{\"files\": [\"src/pytorch/utils._serialization.py\"], \"abstain\": false}\n```"
+          "text": "```json\n{\"files\": [\"sqlalchemy/models.py\"], \"abstain\": false}\n```"
         },
         {
           "instance_id": "rich_3006",
@@ -3537,14 +3807,14 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 3.3868966470472515,
+          "seconds": 3.267347974993754,
           "files": [
-            "rich/progress.py"
+            "rich/scope.py"
           ],
           "gold_files": [
             "rich/repr.py"
           ],
-          "text": "```json\n{\n  \"files\": [\n    \"rich/progress.py\"\n  ],\n  \"abstain\": false\n}\n```"
+          "text": "```json\n{\n  \"files\": [\n    \"rich/scope.py\"\n  ],\n  \"abstain\": false\n}\n```"
         }
       ],
       [
@@ -3556,7 +3826,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 1.160676242026966,
+          "seconds": 32.503692195983604,
           "files": [
             "textual/app/export.py",
             ".pre-commit-config.yaml"
@@ -3574,7 +3844,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 2.539889044011943,
+          "seconds": 71.61472403403604,
           "files": [
             "rich/console.py"
           ],
@@ -3586,6 +3856,222 @@
       ],
       [
         {
+          "instance_id": "rich_3052",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 18.64614679501392,
+          "files": [
+            "rich/prompt.py"
+          ],
+          "gold_files": [
+            "rich/prompt.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"rich/prompt.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "rich_3052",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 32.337493730999995,
+          "files": [
+            "rich/prompt.py"
+          ],
+          "gold_files": [
+            "rich/prompt.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"rich/prompt.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_3061",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 12.232522788981441,
+          "files": [
+            "rich/text.py"
+          ],
+          "gold_files": [
+            "rich/text.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"rich/text.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "rich_3061",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.2744857119978406,
+          "files": [
+            "rich/text.py"
+          ],
+          "gold_files": [
+            "rich/text.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"rich/text.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_3063",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.8468853200320154,
+          "files": [
+            "rich/console.py"
+          ],
+          "gold_files": [
+            "rich/markup.py"
+          ],
+          "text": "```json\n{\"files\": [\"rich/console.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "rich_3063",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.5205017160042189,
+          "files": [
+            "rich/console.py"
+          ],
+          "gold_files": [
+            "rich/markup.py"
+          ],
+          "text": "```json\n{\"files\": [\"rich/console.py\"], \"abstain\": false}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_3064",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.5170995400403626,
+          "files": [
+            "rich/markdown.py"
+          ],
+          "gold_files": [
+            "rich/markdown.py"
+          ],
+          "text": "```json\n{\"files\": [\"rich/markdown.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "rich_3064",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.5532101030112244,
+          "files": [
+            "rich/markdown.py"
+          ],
+          "gold_files": [
+            "rich/markdown.py"
+          ],
+          "text": "```json\n{\"files\": [\"rich/markdown.py\"], \"abstain\": false}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_3067",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.6551514849998057,
+          "files": [
+            "fastapi/routing.py"
+          ],
+          "gold_files": [
+            "rich/highlighter.py"
+          ],
+          "text": "```json\n{\"files\": [\"fastapi/routing.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "rich_3067",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.243932017008774,
+          "files": [
+            "rich/text.py"
+          ],
+          "gold_files": [
+            "rich/highlighter.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"rich/text.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "rich_3105",
+          "repo": "Textualize/rich",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": true,
+          "parsed": true,
+          "seconds": 0.9049426870187744,
+          "files": [
+            "."
+          ],
+          "gold_files": [
+            "rich/_export_format.py"
+          ],
+          "text": "```json\n{\"files\": [\".\"], \"abstain\": true}\n```"
+        },
+        {
+          "instance_id": "rich_3105",
+          "repo": "Textualize/rich",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.4468389410176314,
+          "files": [
+            "rich/syntax.py"
+          ],
+          "gold_files": [
+            "rich/_export_format.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"rich/syntax.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
           "instance_id": "fastapi_11194",
           "repo": "fastapi/fastapi",
           "ontology": false,
@@ -3593,7 +4079,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 1.1623666899977252,
+          "seconds": 1.235929580987431,
           "files": [
             "fastapi/dependencies.py",
             "fastapi/params.py"
@@ -3611,7 +4097,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 3.025539380032569,
+          "seconds": 3.046357719984371,
           "files": [
             "fastapi/params.py"
           ],
@@ -3630,7 +4116,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 0.9866348440409638,
+          "seconds": 1.0536030549556017,
           "files": [
             "typer/utils/types.py"
           ],
@@ -3647,7 +4133,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 0.7260750679997727,
+          "seconds": 0.7312766629620455,
           "files": [
             "typer/utils/types.py"
           ],
@@ -3666,7 +4152,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 0.9194236510084011,
+          "seconds": 0.9316374700283632,
           "files": [
             "fastapi/dependencies.py"
           ],
@@ -3683,14 +4169,14 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 3.3900624489760958,
+          "seconds": 3.3059865360264666,
           "files": [
-            "fastapi/dependencies.py"
+            "fastapi/params.py"
           ],
           "gold_files": [
             "fastapi/_compat.py"
           ],
-          "text": "```json\n{\n  \"files\": [\n    \"fastapi/dependencies.py\"\n  ],\n  \"abstain\": false\n}\n```"
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/params.py\"\n  ],\n  \"abstain\": false\n}\n```"
         }
       ],
       [
@@ -3702,7 +4188,7 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 1.0297548730159178,
+          "seconds": 2.9647927440237254,
           "files": [
             "fastapi/openapi.py"
           ],
@@ -3719,14 +4205,339 @@
           "hit": false,
           "abstain": false,
           "parsed": true,
-          "seconds": 2.579667455982417,
+          "seconds": 2.824617976031732,
           "files": [
+            "fastapi.openapi.utils.generate_schema"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\"files\": [\"fastapi.openapi.utils.generate_schema\"], \"abstain\": false}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_13537",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.237759970012121,
+          "files": [
+            "fastapi/params.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/params.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_13537",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.9544860100140795,
+          "files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/dependencies/utils.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_13920",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.1664853940019384,
+          "files": [
+            "src/pydantic/_internal/typing_utils.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"src/pydantic/_internal/typing_utils.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_13920",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.7901614680304192,
+          "files": [
+            "src/pydantic/_internal/typing_utils.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"src/pydantic/_internal/typing_utils.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_14246",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.8440013899817131,
+          "files": [
+            "fastapi/models.py",
             "fastapi/openapi.py"
           ],
           "gold_files": [
             "fastapi/_compat/v2.py"
           ],
-          "text": "```json\n{\n  \"files\": [\n    \"fastapi/openapi.py\"\n  ],\n  \"abstain\": false\n}\n```"
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/models.py\",\n    \"fastapi/openapi.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_14246",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.7288825080031529,
+          "files": [
+            "fastapi/models.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/models.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_14258",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.5938735739910044,
+          "files": [
+            "fastapi/routing.py"
+          ],
+          "gold_files": [
+            "fastapi/routing.py"
+          ],
+          "text": "```json\n{\"files\": [\"fastapi/routing.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "fastapi_14258",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.7067926130257547,
+          "files": [
+            "fastapi/routing.py"
+          ],
+          "gold_files": [
+            "fastapi/routing.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/routing.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_14266",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.5724387469817884,
+          "files": [
+            "fastapi/openapi.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\"files\": [\"fastapi/openapi.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "fastapi_14266",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.0451675850199535,
+          "files": [
+            "fastapi/openapi/utils.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/openapi/utils.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_14297",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.1109893640386872,
+          "files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/_compat/v2.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_14297",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 2.6884651299915276,
+          "files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/_compat/v2.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_14301",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 1.098560462007299,
+          "files": [
+            "fastapi/dependencies.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/dependencies.py\"\n  ],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_14301",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 2.6482819839729927,
+          "files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\"files\": [\"fastapi/dependencies/utils.py\"], \"abstain\": false}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_14303",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 2.064436666027177,
+          "files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"fastapi/dependencies/utils.py\"],\n  \"abstain\": false\n}\n```"
+        },
+        {
+          "instance_id": "fastapi_14303",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": true,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 3.91449166595703,
+          "files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "gold_files": [
+            "fastapi/dependencies/utils.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\"fastapi/dependencies/utils.py\"],\n  \"abstain\": false\n}\n```"
+        }
+      ],
+      [
+        {
+          "instance_id": "fastapi_14349",
+          "repo": "fastapi/fastapi",
+          "ontology": false,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.9238155669881962,
+          "files": [
+            "fastapi/schema.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\"files\": [\"fastapi/schema.py\"], \"abstain\": false}\n```"
+        },
+        {
+          "instance_id": "fastapi_14349",
+          "repo": "fastapi/fastapi",
+          "ontology": true,
+          "error": null,
+          "hit": false,
+          "abstain": false,
+          "parsed": true,
+          "seconds": 0.9253837239812128,
+          "files": [
+            "fastapi/openapi/models.py"
+          ],
+          "gold_files": [
+            "fastapi/_compat/v2.py"
+          ],
+          "text": "```json\n{\n  \"files\": [\n    \"fastapi/openapi/models.py\"\n  ],\n  \"abstain\": false\n}\n```"
         }
       ]
     ]

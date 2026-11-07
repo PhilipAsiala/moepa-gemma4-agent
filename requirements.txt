@@ -1,2 +1,4 @@
 numpy>=1.26
 pytest>=8.0
+# Optional: only needed to download competition assets
+# kaggle>=2.2

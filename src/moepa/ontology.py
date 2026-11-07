@@ -82,7 +82,7 @@ class OntologySubstrate:
         }
 
     def seed_symbols_from_text(self, text: str, limit: int = 8) -> List[str]:
-        """Lexical seed extraction: short names from the issue that appear as graph node ids.
+        """Lexical seed extraction: short names / path hints from the issue that hit graph ids.
 
         Offline fallback when a query embedding for search_similar_code is unavailable.
         """
@@ -92,7 +92,33 @@ class OntologySubstrate:
             for node_id in self.node_ids
             if node_id.split(".")[-1].split(":")[-1] in tokens
         ]
-        return matched[:limit]
+        if matched:
+            return matched[:limit]
+        # Path-like hints: "fastapi/routing.py" → prefix fastapi.routing
+        path_hints = re.findall(
+            r"([A-Za-z0-9_./-]+\.py)", text
+        )
+        for hint in path_hints:
+            rel = hint.strip().lstrip("./")
+            if rel.startswith("src/"):
+                rel = rel[4:]
+            prefix = rel[:-3].replace("/", ".")
+            hits = [
+                node_id
+                for node_id in self.node_ids
+                if node_id == prefix or node_id.startswith(prefix + ".")
+            ]
+            matched.extend(hits)
+            if len(matched) >= limit:
+                break
+        # Deduplicate, preserve order.
+        seen = set()
+        ordered = []
+        for node_id in matched:
+            if node_id not in seen:
+                seen.add(node_id)
+                ordered.append(node_id)
+        return ordered[:limit]
 
     def rank_seeds_by_embedding(
         self, query_vec: Sequence[float], top_n: int = 8

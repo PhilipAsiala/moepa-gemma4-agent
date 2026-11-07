@@ -49,5 +49,6 @@ data/**
 outputs/**
 !outputs/
 !outputs/microbench.json
+!outputs/snapshot_probe.json
 wandb/
 runs/

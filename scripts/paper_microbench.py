@@ -44,11 +44,18 @@ RAW = ROOT / "outputs" / "microbench.json"
 SEED = 20261107
 CONTEXT_CHARS = 5000
 SNIPPET_CHARS = 700
+# Default 12-task probe (paper §3). Use --gemma-per-repo to enlarge.
 GEMMA_BY_REPO = {
     "encode/httpx": 1,
     "psf/requests": 3,
     "Textualize/rich": 4,
     "fastapi/fastapi": 4,
+}
+GEMMA_BY_REPO_LARGE = {
+    "encode/httpx": 1,
+    "psf/requests": 6,
+    "Textualize/rich": 10,
+    "fastapi/fastapi": 13,
 }
 
 
@@ -259,9 +266,11 @@ def pack_context(ctx: Dict[str, str], seeds: Sequence[str], budget: int = CONTEX
     return "".join(parts)
 
 
-def select_gemma_tasks(tasks: Sequence[dict]) -> List[dict]:
+def select_gemma_tasks(
+    tasks: Sequence[dict], quotas: Optional[Dict[str, int]] = None
+) -> List[dict]:
     chosen = []
-    for repo, count in GEMMA_BY_REPO.items():
+    for repo, count in (quotas or GEMMA_BY_REPO).items():
         pool = [task for task in tasks if task["repo"] == repo]
         singles = [task for task in pool if len(gold_files(task["patch"])) == 1]
         singles.sort(key=lambda task: task["instance_id"])
@@ -305,6 +314,7 @@ def ollama_json(prompt: str, model: str = "gemma4:12b") -> dict:
         ],
         "options": {"temperature": 0.2, "num_ctx": 4096, "num_predict": 256},
     }
+    # model is closed over by callers via gemma_condition(..., model=)
     started = time.monotonic()
     try:
         body = _post_chat(payload)
@@ -347,7 +357,12 @@ def path_matches(pred: str, gold: str) -> bool:
     return file_prefix(left) == file_prefix(right)
 
 
-def gemma_condition(task: dict, neighborhood_row: dict, use_ontology: bool) -> dict:
+def gemma_condition(
+    task: dict,
+    neighborhood_row: dict,
+    use_ontology: bool,
+    model: str = "gemma4:12b",
+) -> dict:
     issue = task["problem_statement"][:4000]
     prompt = f"Issue:\n{issue}\n"
     if use_ontology:
@@ -355,7 +370,7 @@ def gemma_condition(task: dict, neighborhood_row: dict, use_ontology: bool) -> d
         prompt += f"\nCode neighborhood:\n{packed}\n"
     prompt += "\nWhich files should be edited?\n"
     try:
-        result = ollama_json(prompt)
+        result = ollama_json(prompt, model=model)
         error = None
     except (urllib.error.URLError, RuntimeError, TimeoutError) as exc:
         return {
@@ -500,6 +515,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--skip-gemma", action="store_true")
     parser.add_argument("--gemma-only", action="store_true")
+    parser.add_argument("--model", default="gemma4:12b")
+    parser.add_argument(
+        "--large-probe",
+        action="store_true",
+        help="Use GEMMA_BY_REPO_LARGE (~30 tasks) instead of the 12-task paper probe",
+    )
     args = parser.parse_args()
     rng = random.Random(SEED)
     tasks = load_tasks()
@@ -535,16 +556,20 @@ def main() -> None:
         print(json.dumps({k: report[k] for k in ("embeddings", "localization", "axiology", "metrology")}, indent=2))
 
     if not args.skip_gemma:
-        chosen = select_gemma_tasks(tasks)
-        print(f"gemma tasks {[task['instance_id'] for task in chosen]}", flush=True)
+        quotas = GEMMA_BY_REPO_LARGE if args.large_probe else GEMMA_BY_REPO
+        chosen = select_gemma_tasks(tasks, quotas=quotas)
+        print(
+            f"gemma model={args.model} tasks={[task['instance_id'] for task in chosen]}",
+            flush=True,
+        )
         details = []
         for task in chosen:
             row = loc_rows_by_id[task["instance_id"]]
             if "ctx" not in row:
                 fresh = neighborhood(task, rng, trials=1)
                 row = fresh
-            base = gemma_condition(task, row, use_ontology=False)
-            ont = gemma_condition(task, row, use_ontology=True)
+            base = gemma_condition(task, row, use_ontology=False, model=args.model)
+            ont = gemma_condition(task, row, use_ontology=True, model=args.model)
             print(
                 f"{task['instance_id']} base={base['hit']}/{base['parsed']} "
                 f"ont={ont['hit']}/{ont['parsed']} "
@@ -560,7 +585,7 @@ def main() -> None:
             return float(np.mean(vals)) if vals else 0.0
 
         report["gemma"] = {
-            "model": "gemma4:12b",
+            "model": args.model,
             "n": len(details),
             "base_hits": hits(0),
             "ont_hits": hits(1),

@@ -5,59 +5,58 @@ Research repository for **Google – The Gemma 4 Developer Agent Paper Track** o
 **Working title:** Deterministic Cognitive Governance for Offline Software Engineering Agents: The MOEPA 5-Layer Architecture on Directed AST Multigraphs
 
 **Deadline:** November 12, 2026 · 11:59 PM UTC  
-**Competition:** [gemma-4-developer-agent-paper](https://www.kaggle.com/competitions/gemma-4-developer-agent-paper)
+**Competition:** [gemma-4-developer-agent-paper](https://www.kaggle.com/competitions/gemma-4-developer-agent-paper)  
+**Public code:** https://github.com/PhilipAsiala/moepa-gemma4-agent
 
 ## Idea in one line
 
 Wrap a small open model (Gemma 4) in a five-layer cognitive governance stack—**Metrology, Ontology, Epistemology, Praxeology, Axiology**—so offline agents can navigate code graphs, propose patches, and refuse unsafe or unverified edits on consumer hardware.
 
-## Start here (paper prep)
+## Start here
 
 | Path | Description |
 |------|-------------|
-| **[`paper/DRAFT.md`](paper/DRAFT.md)** | **Canonical writeup** — edit this toward the ≤3,000-word Kaggle submission |
-| [`docs/data-substrate.md`](docs/data-substrate.md) | Competition graphs / embeddings / tasks → MOEPA layers (what Ontology actually reads) |
-| [`docs/execution-plan.md`](docs/execution-plan.md) | 6-day checklist (experiments → results → submit) |
-| [`docs/competition-brief.md`](docs/competition-brief.md) | Rules, rubric, prizes |
-| [`src/moepa/`](src/moepa/) | Layered agent skeleton (companion resource) |
-| `python scripts/wordcount.py` | Word-count helper vs 3,000 limit |
+| **[`paper/DRAFT.md`](paper/DRAFT.md)** | Canonical writeup (edit this) |
+| [`paper/WRITEUP.md`](paper/WRITEUP.md) | Kaggle-ready paste (no HTML comments) |
+| [`docs/microbench-results.md`](docs/microbench-results.md) | Measured results summary |
+| [`outputs/microbench.json`](outputs/microbench.json) | Raw microbench rows |
+| [`scripts/paper_microbench.py`](scripts/paper_microbench.py) | Reproduce substrate / gate / localization probes |
+| [`docs/data-substrate.md`](docs/data-substrate.md) | Competition graphs / embeddings → MOEPA layers |
+| [`src/moepa/`](src/moepa/) | Layered agent + Ollama client |
 
-## Paper Track snapshot
+## Headline public-dev results
 
-- **Scope:** Original, unpublished research · max **3,000 words** (Kaggle Writeup)
-- **Required sections:** title + subtitle · abstract · introduction · methods/experiments · related work + citations
-- **Optional:** public notebook and/or public PDF project link
-- **Judging (equal weight, 0–5):** Novelty · Quality · Relevance · Verifiability · Clarity
+On the 129-task public set (no pytest resolve rate yet):
 
-### Prizes ($35,000)
+- Lexical seed + 1-hop call neighborhood covers a gold hunk symbol in **19.2%** of cases vs **3.2%** size-matched random.
+- Axiology approves **129/129** gold diffs and rejects test-tamper / shim / empty diffs.
+- Shipped 256-d embeddings are weakly discriminative (mean random-pair cosine ≈ 0.829).
+- Gemma 4 12B file localization (n=30): **10/30** issue-only → **14/30** with capped neighborhood.
+- Snapshot gold apply / syntax / Axiology (91 single-file tasks): **91 / 91 / 90**.
 
-| Award | Amount |
-|-------|--------|
-| Overall Best Paper | $15,000 |
-| Best New Resource | $10,000 |
-| Best New Application | $10,000 |
+Reproduce (needs local `data/` from the main competition Data tab + optional Ollama):
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+# place tasks.jsonl, graphs/, embeddings/ [, snapshots/] under data/ (see data/README.md)
+.venv/bin/python scripts/paper_microbench.py --skip-gemma
+.venv/bin/python scripts/paper_microbench.py --gemma-only --large-probe --model gemma4:12b
+.venv/bin/python scripts/snapshot_probe.py --limit 91
+```
 
 ## Status
 
-Paper skeleton and code modules are in place. **Section 3 results are TBD** until the public-task micro-benchmark runs (see execution plan).
-
-Solo entrant · public repository (no private team sharing).
+Paper Track companion with measured substrate, gates, localization, and snapshot-apply evidence. Solo entrant · public Apache-2.0 repo. Fail-to-pass pytest resolve remains future work (competition wheels/sandbox).
 
 ## License
 
-Copyright 2026 Philip Asiala
-
-Licensed under the **Apache License, Version 2.0** — see [`LICENSE`](LICENSE). This matches the Paper Track winner license type and Kaggle’s public Competition Code sharing rules (OSI-approved, commercial use allowed).
+Copyright 2026 Philip Asiala · **Apache License 2.0** — see [`LICENSE`](LICENSE).
 
 ## Kaggle public sharing
 
-Kaggle allows **public** Competition Code and requires that shared code also appear on the **competition discussion forum or notebooks** so all participants can access it. When the companion resource is ready:
-
-1. Publish a **public Kaggle Notebook** for this competition that links this repo.
-2. Post a short **forum thread** with the repo URL + notebook link.
-3. Point the Writeup **Project Links** field at this GitHub repo (and notebook/PDF if used).
-
-Do **not** privately share competition code or data outside a merged team.
+1. Publish a public Kaggle Notebook linking this repo.  
+2. Forum post with repo + notebook.  
+3. Writeup Project Links → this GitHub URL.
 
 ## Citation
 

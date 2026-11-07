@@ -38,12 +38,22 @@ class OllamaClient:
             "model": self.model,
             "messages": messages,
             "stream": False,
+            "think": False,
             "options": {
                 "temperature": self.temperature,
                 "num_ctx": 4096,
                 "num_predict": self.num_predict,
             },
         }
+        body = self._post(payload)
+        msg = body.get("message") or {}
+        content = (msg.get("content") or "").strip()
+        if content:
+            return content
+        # Fallback if the model spent the budget in thinking only.
+        return (msg.get("thinking") or "").strip()
+
+    def _post(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         req = urllib.request.Request(
             f"{self.base_url}/api/chat",
             data=json.dumps(payload).encode("utf-8"),
@@ -52,12 +62,13 @@ class OllamaClient:
         )
         try:
             with urllib.request.urlopen(req, timeout=self.timeout_sec) as resp:
-                body = json.loads(resp.read().decode("utf-8"))
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "replace")
+            if e.code == 400 and "think" in detail and "think" in payload:
+                payload = dict(payload)
+                payload.pop("think", None)
+                return self._post(payload)
+            raise RuntimeError(f"Ollama HTTP {e.code}: {detail}") from e
         except urllib.error.URLError as e:
             raise RuntimeError(f"Ollama chat failed for {self.model}: {e}") from e
-        msg = body.get("message") or {}
-        content = (msg.get("content") or "").strip()
-        if content:
-            return content
-        # Fallback if the model spent the budget in thinking only.
-        return (msg.get("thinking") or "").strip()
