@@ -50,5 +50,6 @@ outputs/**
 !outputs/
 !outputs/microbench.json
 !outputs/snapshot_probe.json
+!outputs/pytest_resolve.json
 wandb/
 runs/

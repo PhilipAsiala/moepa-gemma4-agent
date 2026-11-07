@@ -26,7 +26,7 @@ Wrap a small open model (Gemma 4) in a five-layer cognitive governance stack—*
 
 ## Headline public-dev results
 
-On the 129-task public set (no pytest resolve rate yet):
+On the 129-task public set (local wheel-backed pytest gold resolve 16/20):
 
 - Lexical seed + 1-hop call neighborhood covers a gold hunk symbol in **19.2%** of cases vs **3.2%** size-matched random.
 - Axiology approves **129/129** gold diffs and rejects test-tamper / shim / empty diffs.
@@ -46,7 +46,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 ## Status
 
-Paper Track companion with measured substrate, gates, localization, and snapshot-apply evidence. Solo entrant · public Apache-2.0 repo. Fail-to-pass pytest resolve remains future work (competition wheels/sandbox).
+Paper Track companion with measured substrate, gates, localization, snapshot-apply, and local wheel-backed pytest resolve evidence. Solo entrant · public Apache-2.0 repo.
 
 ## License
 

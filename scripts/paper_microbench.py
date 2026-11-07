@@ -479,6 +479,28 @@ def render(report: dict) -> str:
                 f"`{row['gold']}` | {row['base']} | {row['ont']} |"
             )
         lines.append("")
+    for key, title in (
+        ("gemma_26b", "Gemma 4 26B file localization (comparison)"),
+        ("gemma_31b", "Gemma 4 31B file localization (comparison)"),
+    ):
+        alt = report.get(key)
+        if not alt:
+            continue
+        lines.extend(
+            [
+                f"## {title}",
+                "",
+                f"Model `{alt['model']}` on `127.0.0.1:11434`, think disabled, "
+                f"context 4096, {alt['n']} public tasks.",
+                f"Issue text only: file hit {pct(alt['base_hits'], alt['n'])}, "
+                f"abstain {alt.get('base_abstain', 0)}, parse failures {alt.get('base_unparsed', 0)}, "
+                f"mean {alt['base_seconds']:.1f}s.",
+                f"Issue plus capped neighborhood: file hit {pct(alt['ont_hits'], alt['n'])}, "
+                f"abstain {alt.get('ont_abstain', 0)}, parse failures {alt.get('ont_unparsed', 0)}, "
+                f"mean {alt['ont_seconds']:.1f}s.",
+                "",
+            ]
+        )
     return "\n".join(lines)
 
 
@@ -584,7 +606,7 @@ def main() -> None:
             vals = [pair[side]["seconds"] for pair in details if pair[side]["seconds"]]
             return float(np.mean(vals)) if vals else 0.0
 
-        report["gemma"] = {
+        gemma_block = {
             "model": args.model,
             "n": len(details),
             "base_hits": hits(0),
@@ -609,6 +631,13 @@ def main() -> None:
             ],
             "details": details,
         }
+        # Keep the primary paper probe under `gemma`; stash other models beside it.
+        if args.model == "gemma4:12b" or "gemma" not in report:
+            report["gemma"] = gemma_block
+        else:
+            key = "gemma_" + args.model.split(":")[-1].replace(".", "_")
+            report[key] = gemma_block
+
 
     report.pop("_ctx", None)
     # Drop bulky contexts if a gemma-only reload stored them inside localization rows.

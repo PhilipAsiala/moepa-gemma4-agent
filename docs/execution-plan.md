@@ -29,7 +29,7 @@ Aim to be competitive for all three Paper Track awards by shipping:
 - [x] Wire Gemma 4 into `MOEPAGemmaAgent._synthesize_edit` (Ollama / B70)
 - [x] Run micro-benchmark + 30-task Gemma localization + snapshot gold-apply probe
 - [x] Fill Section 3 table + headline Abstract / Conclusion sentences in `paper/DRAFT.md`
-- [ ] Optional: install competition wheels/sandbox for fail-to-pass pytest resolve rate
+- [x] Optional: competition wheels + `python:3.13-slim` local pytest resolve probe (`scripts/pytest_resolve_probe.py`)
 
 ### Tue–Wed (Nov 10–11) — polish
 

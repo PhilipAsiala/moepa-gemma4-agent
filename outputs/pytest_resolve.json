@@ -1,0 +1,324 @@
+{
+  "n_gold": 20,
+  "gold_resolve": 16,
+  "fail_baseline_ok": 20,
+  "n_agent": 3,
+  "agent_patch": 0,
+  "agent_resolve": 0,
+  "agent_axiology_ok": 0,
+  "model": "gemma4:12b",
+  "wheels_count": 142,
+  "docker_image": "python:3.13-slim",
+  "note": "Local wheel-backed pytest resolve inside python:3.13-slim. Not the official swegemma Docker verifier.",
+  "gold_rows": [
+    {
+      "instance_id": "rich_2725",
+      "repo": "Textualize/rich",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 7.99,
+      "tests": [
+        "tests/test_table.py",
+        "-k",
+        "test_placement_table_box_elements"
+      ]
+    },
+    {
+      "instance_id": "fastapi_11194",
+      "repo": "fastapi/fastapi",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 23.0,
+      "tests": [
+        "tests/test_file_and_form_order_issue_9116.py",
+        "-k",
+        "test_file_form_order or test_file_list_form_order"
+      ]
+    },
+    {
+      "instance_id": "requests_6589",
+      "repo": "psf/requests",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 22.91,
+      "tests": [
+        "tests/test_requests.py",
+        "-k",
+        "test_content_length_for_bytes_data or test_content_length_for_string_data_counts_bytes"
+      ]
+    },
+    {
+      "instance_id": "rich_2943",
+      "repo": "Textualize/rich",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 7.81,
+      "tests": [
+        "tests/test_style.py",
+        "-k",
+        "test_clear_meta_and_links_clears_hash"
+      ]
+    },
+    {
+      "instance_id": "fastapi_11355",
+      "repo": "fastapi/fastapi",
+      "gold_resolve": false,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": "________ ERROR collecting tests/test_stringified_annotations_simple.py _________\nImportError while importing test module '/workspace/tests/test_stringified_annotations_simple.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/local/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_stringified_annotations_simple.py",
+      "seconds": 23.25,
+      "tests": [
+        "tests/test_stringified_annotations_simple.py",
+        "-k",
+        "test_stringified_annotations"
+      ]
+    },
+    {
+      "instance_id": "requests_6592",
+      "repo": "psf/requests",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 21.4,
+      "tests": [
+        "tests/test_requests.py",
+        "-k",
+        "test_status_code_425"
+      ]
+    },
+    {
+      "instance_id": "rich_3006",
+      "repo": "Textualize/rich",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 8.39,
+      "tests": [
+        "tests/test_repr.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_12942",
+      "repo": "fastapi/fastapi",
+      "gold_resolve": false,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": "==================================== ERRORS ====================================\n___________ ERROR collecting tests/test_union_body_discriminator.py ____________\nImportError while importing test module '/workspace/tests/test_union_body_discriminator.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/local/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^",
+      "seconds": 22.74,
+      "tests": [
+        "tests/test_union_body_discriminator.py",
+        "-k",
+        "test_discriminator_pydantic_v2"
+      ]
+    },
+    {
+      "instance_id": "requests_6629",
+      "repo": "psf/requests",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 21.51,
+      "tests": [
+        "tests/test_requests.py",
+        "-k",
+        "test_json_decode_errors_are_serializable_deserializable"
+      ]
+    },
+    {
+      "instance_id": "rich_3043",
+      "repo": "Textualize/rich",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 8.25,
+      "tests": [
+        "tests/test_console.py"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13207",
+      "repo": "fastapi/fastapi",
+      "gold_resolve": false,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": "________________ ERROR collecting tests/test_computed_fields.py ________________\nImportError while importing test module '/workspace/tests/test_computed_fields.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/local/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_computed_fields.py:5: in <module>\n    from .util",
+      "seconds": 23.69,
+      "tests": [
+        "tests/test_computed_fields.py"
+      ]
+    },
+    {
+      "instance_id": "requests_6644",
+      "repo": "psf/requests",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 20.98,
+      "tests": [
+        "tests/test_adapters.py",
+        "-k",
+        "test_request_url_trims_leading_path_separators"
+      ]
+    },
+    {
+      "instance_id": "rich_3052",
+      "repo": "Textualize/rich",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 7.94,
+      "tests": [
+        "tests/test_prompt.py",
+        "-k",
+        "test_prompt_str_case_insensitive"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13537",
+      "repo": "fastapi/fastapi",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 23.62,
+      "tests": [
+        "tests/test_form_default.py",
+        "-k",
+        "test_form_default_url_encoded or test_form_default_multi_part"
+      ]
+    },
+    {
+      "instance_id": "requests_7205",
+      "repo": "psf/requests",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 21.16,
+      "tests": [
+        "tests/test_utils.py",
+        "-k",
+        "test_empty_default_credentials_ignored"
+      ]
+    },
+    {
+      "instance_id": "rich_3061",
+      "repo": "Textualize/rich",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 8.1,
+      "tests": [
+        "tests/test_panel.py",
+        "tests/test_text.py",
+        "-k",
+        "test_tabs_to_spaces_spans or test_extend_style"
+      ]
+    },
+    {
+      "instance_id": "fastapi_13920",
+      "repo": "fastapi/fastapi",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 23.23,
+      "tests": [
+        "tests/test_dependency_pep695.py",
+        "-k",
+        "test_pep695_type_dependencies"
+      ]
+    },
+    {
+      "instance_id": "requests_7309",
+      "repo": "psf/requests",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 21.86,
+      "tests": [
+        "tests/test_utils.py"
+      ]
+    },
+    {
+      "instance_id": "rich_3063",
+      "repo": "Textualize/rich",
+      "gold_resolve": true,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": null,
+      "seconds": 7.96,
+      "tests": [
+        "tests/test_markup.py",
+        "-k",
+        "test_escape_backslash_end"
+      ]
+    },
+    {
+      "instance_id": "fastapi_14246",
+      "repo": "fastapi/fastapi",
+      "gold_resolve": false,
+      "fail_baseline": true,
+      "setup": "docker:python:3.13-slim",
+      "error": "ImportError while importing test module '/workspace/tests/test_pydantic_v1_v2_multifile/test_multifile.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/local/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_pydantic_v1_v2_multifile/test_multifile.py:3: in <module>\n    from tests.utils import pydantic_snapshot, ",
+      "seconds": 23.19,
+      "tests": [
+        "tests/test_no_schema_split.py",
+        "tests/test_pydantic_v1_v2_multifile/test_multifile.py",
+        "-k",
+        "test_create_message or test_openapi_schema"
+      ]
+    }
+  ],
+  "agent_rows": [
+    {
+      "instance_id": "rich_2725",
+      "repo": "Textualize/rich",
+      "agent_patch": false,
+      "agent_axiology_ok": false,
+      "agent_resolve": false,
+      "error": "NO_PATCH",
+      "seconds": 85.22,
+      "diff_preview": null,
+      "setup": "docker:python:3.13-slim"
+    },
+    {
+      "instance_id": "fastapi_11194",
+      "repo": "fastapi/fastapi",
+      "agent_patch": false,
+      "agent_axiology_ok": false,
+      "agent_resolve": false,
+      "error": "NO_PATCH",
+      "seconds": 112.32,
+      "diff_preview": null,
+      "setup": "docker:python:3.13-slim"
+    },
+    {
+      "instance_id": "requests_6589",
+      "repo": "psf/requests",
+      "agent_patch": false,
+      "agent_axiology_ok": false,
+      "agent_resolve": false,
+      "error": "NO_PATCH",
+      "seconds": 114.84,
+      "diff_preview": null,
+      "setup": "docker:python:3.13-slim"
+    }
+  ]
+}

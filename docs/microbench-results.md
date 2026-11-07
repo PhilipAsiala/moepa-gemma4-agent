@@ -1,9 +1,7 @@
 # Paper micro-benchmark
 
 Measured from `scripts/paper_microbench.py` on the public development set.
-Fail-to-pass pytest resolve rate is not reported here (needs competition wheels/sandbox).
-Snapshot gold-apply / syntax / Axiology numbers live in `outputs/snapshot_probe.json`
-(from `scripts/snapshot_probe.py`).
+Repository snapshots were not checked out, so this file does not report a pytest resolve rate.
 
 ## Embeddings
 
@@ -63,3 +61,9 @@ Issue plus capped neighborhood: file hit 14/30 (46.7%), abstain 0, parse failure
 | `fastapi_14301` | fastapi | `fastapi/dependencies/utils.py` | fastapi/dependencies.py | fastapi/dependencies/utils.py |
 | `fastapi_14303` | fastapi | `fastapi/dependencies/utils.py` | fastapi/dependencies/utils.py | fastapi/dependencies/utils.py |
 | `fastapi_14349` | fastapi | `fastapi/_compat/v2.py` | fastapi/schema.py | fastapi/openapi/models.py |
+
+## Gemma 4 26B file localization (comparison)
+
+Model `gemma4:26b` on `127.0.0.1:11434`, think disabled, context 4096, 12 public tasks.
+Issue text only: file hit 1/12 (8.3%), abstain 9, parse failures 0, mean 2.0s.
+Issue plus capped neighborhood: file hit 3/12 (25.0%), abstain 8, parse failures 0, mean 1.8s.
