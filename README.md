@@ -1,7 +1,5 @@
 # MOEPA: Gemma 4 Developer Agent Paper Track
 
-Research repository for **Google – The Gemma 4 Developer Agent Paper Track** on Kaggle.
-
 **Working title:** Deterministic Cognitive Governance for Offline Software Engineering Agents: The MOEPA 5-Layer Architecture on Directed AST Multigraphs
 
 **Deadline:** November 12, 2026 · 11:59 PM UTC  
@@ -12,21 +10,42 @@ Research repository for **Google – The Gemma 4 Developer Agent Paper Track** o
 
 Wrap a small open model (Gemma 4) in a five-layer cognitive governance stack—**Metrology, Ontology, Epistemology, Praxeology, Axiology**—so offline agents can navigate code graphs, propose patches, and refuse unsafe or unverified edits on consumer hardware.
 
-## Start here
+## Kaggle submission kit
 
-| Path | Description |
-|------|-------------|
-| **[`paper/DRAFT.md`](paper/DRAFT.md)** | Canonical writeup (edit this) |
-| [`paper/WRITEUP.md`](paper/WRITEUP.md) | Kaggle-ready paste (no HTML comments) |
-| [`docs/microbench-results.md`](docs/microbench-results.md) | Measured results summary |
-| [`outputs/microbench.json`](outputs/microbench.json) | Raw microbench rows |
-| [`scripts/paper_microbench.py`](scripts/paper_microbench.py) | Reproduce substrate / gate / localization probes |
-| [`docs/data-substrate.md`](docs/data-substrate.md) | Competition graphs / embeddings → MOEPA layers |
-| [`docs/android-cloud.md`](docs/android-cloud.md) | Continue this agent from Android Chrome (`cursor.com/agents`) |
-| [`docs/kaggle-publish-checklist.md`](docs/kaggle-publish-checklist.md) | Notebook + forum + writeup paste steps |
-| [`docs/self-score.md`](docs/self-score.md) | Working rubric scores before Submit |
-| [`notebooks/moepa-graph-walkthrough.md`](notebooks/moepa-graph-walkthrough.md) | Public Kaggle notebook scaffold (one graph + embedding walk) |
-| [`src/moepa/`](src/moepa/) | Layered agent + Ollama client |
+| Artifact | Path | Use |
+|----------|------|-----|
+| **Writeup (paste)** | [`paper/WRITEUP.md`](paper/WRITEUP.md) | Paper Track → Writeups → draft body → **Submit** |
+| Author draft | [`paper/DRAFT.md`](paper/DRAFT.md) | Same text + HTML comments; edit here, then refresh WRITEUP |
+| Public notebook scaffold | [`notebooks/moepa-graph-walkthrough.md`](notebooks/moepa-graph-walkthrough.md) | New Notebook → paste cells → Settings → **Public** |
+| Measured results | [`docs/microbench-results.md`](docs/microbench-results.md) | Numbers cited in the paper |
+| Raw JSON | [`outputs/`](outputs/) | Microbench / snapshot / pytest-resolve rows |
+| Layer mapping | [`docs/data-substrate.md`](docs/data-substrate.md) | Competition graphs / embeddings → MOEPA layers |
+| Code | [`src/moepa/`](src/moepa/) | Governance layers + Ollama client |
+| Reproduce | [`scripts/`](scripts/) | `paper_microbench.py`, `snapshot_probe.py`, `pytest_resolve_probe.py` |
+
+### Paste map
+
+1. Paste `paper/WRITEUP.md` into the Paper Track Writeup; link this GitHub repo (+ public notebook URL once live).
+2. Publish a **public** notebook from `notebooks/moepa-graph-walkthrough.ipynb` (or the `.md` scaffold). First markdown cell must link this repo. Attach competition Data (`tasks.jsonl`, `graphs/`, `embeddings/`).
+3. Forum post (GitHub alone does not satisfy public-sharing rules):
+
+```text
+MOEPA — governed Gemma 4 coding agent (Paper Track)
+
+Public repo (Apache-2.0):
+https://github.com/PhilipAsiala/moepa-gemma4-agent
+
+Public notebook (graph + embedding walkthrough):
+<PASTE_NOTEBOOK_URL>
+
+Headline public-dev numbers (see repo README / docs/microbench-results.md):
+- Hunk-symbol coverage 19.2% vs 3.2% random
+- Gemma 4 12B file hit 10/30 → 14/30 with capped neighborhood
+- Snapshot gold apply/syntax/Axiology 91/91/90
+- Local wheel-backed pytest gold resolve 16/20
+
+Happy to answer questions on the five-layer gates (Metrology / Ontology / Epistemology / Praxeology / Axiology).
+```
 
 ## Headline public-dev results
 
@@ -50,21 +69,11 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 ## Status
 
-Paper Track companion with measured substrate, gates, localization, snapshot-apply, and local wheel-backed pytest resolve evidence. Solo entrant · public Apache-2.0 repo.
+Paper Track companion with measured substrate, gates, localization, snapshot-apply, and local wheel-backed pytest resolve evidence. Solo entrant · Apache-2.0.
 
 ## License
 
 Copyright 2026 Philip Asiala · **Apache License 2.0** — see [`LICENSE`](LICENSE).
-
-## Kaggle public sharing
-
-1. Publish a public Kaggle Notebook from [`notebooks/moepa-graph-walkthrough.md`](notebooks/moepa-graph-walkthrough.md) linking this repo.  
-2. Forum post with repo + notebook.  
-3. Writeup Project Links → this GitHub URL.
-
-## Phone follow-ups (Android)
-
-Open **https://cursor.com/agents** in Chrome, pick this cloud agent, and send follow-ups. Local Arc Pro B70 / Ollama / `data/snapshots` stay on the workstation — see [`docs/android-cloud.md`](docs/android-cloud.md).
 
 ## Citation
 

@@ -97,4 +97,4 @@ Download from the competition Data tab (requires a Kaggle account). Do not commi
 
 - Verifiability: readers can see which files and tools the method depends on.
 - Relevance / Best New Application: MOEPA as governance **of** the provided graph + embedding substrate, not instead of it.
-- Best New Resource: a public notebook that walks `graphs/` + `embeddings/` through `OntologySubstrate` (see [`execution-plan.md`](execution-plan.md)).
+- Best New Resource: a public notebook that walks `graphs/` + `embeddings/` through `OntologySubstrate` (see [`../notebooks/moepa-graph-walkthrough.md`](../notebooks/moepa-graph-walkthrough.md)).

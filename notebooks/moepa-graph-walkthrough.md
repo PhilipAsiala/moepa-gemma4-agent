@@ -202,8 +202,8 @@ print(
 
 ## 6. Link back to the paper + gates
 
-- Method: Ontology layer in `paper/DRAFT.md` §2.2  
-- Measured neighborhood / gate numbers: `paper/DRAFT.md` §3 (do not invent new stats here)  
+- Method: Ontology layer in `paper/WRITEUP.md` §2.2  
+- Measured neighborhood / gate numbers: `paper/WRITEUP.md` §3 (do not invent new stats here)  
 - Code: `src/moepa/ontology.py`, agent loop in `src/moepa/agent.py`  
 - Datasheet: `docs/data-substrate.md`
 
