@@ -8,10 +8,12 @@ Consumes the competition data substrate documented in docs/data-substrate.md:
 
 from __future__ import annotations
 
+import ast
+import builtins
 import json
 import re
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Sequence, Set
+from typing import Dict, List, Optional, Sequence, Set
 
 import numpy as np
 
@@ -144,15 +146,50 @@ class OntologySubstrate:
         return [self.node_ids[i] for i in order]
 
     def reject_out_of_neighborhood(
-        self, referenced_names: Iterable[str], allowed: Set[str]
+        self, patched_source: str, allowed: Set[str]
     ) -> List[str]:
-        """Return referenced short names that are neither in G_sub nor obviously stdlib-ish."""
+        """Return loaded names in `patched_source` that resolve nowhere.
+
+        A name is an offender when it is read (ast.Name, Load) and is
+        neither defined in the patched file (defs, imports, assignments,
+        arguments), a builtin, nor the short name of a symbol in the
+        allowed neighborhood (G_sub short names + seed symbols). Attribute
+        names are not Name nodes, so method calls are judged on their root
+        name only; the pytest gate remains the check for those. Unparseable
+        source returns [] so the syntax gate (Phase B) handles it.
+        """
+        try:
+            tree = ast.parse(patched_source)
+        except SyntaxError:
+            return []
+        defined: Set[str] = set()
+        loaded: List[str] = []
+        for node in ast.walk(tree):
+            if isinstance(
+                node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)
+            ):
+                defined.add(node.name)
+            elif isinstance(node, ast.Import):
+                for alias in node.names:
+                    defined.add((alias.asname or alias.name).split(".")[0])
+            elif isinstance(node, ast.ImportFrom):
+                for alias in node.names:
+                    defined.add(alias.asname or alias.name)
+            elif isinstance(node, ast.Name):
+                if isinstance(node.ctx, ast.Store):
+                    defined.add(node.id)
+                elif isinstance(node.ctx, ast.Load):
+                    loaded.append(node.id)
+            elif isinstance(node, ast.arg):
+                defined.add(node.arg)
         allowed_short = {a.split(".")[-1].split(":")[-1] for a in allowed}
-        offenders = []
-        for name in referenced_names:
-            if name in allowed_short:
-                continue
-            if name in {"self", "cls", "super"} or name.startswith("_"):
-                continue
-            offenders.append(name)
-        return offenders
+        builtins_names = set(dir(builtins))
+        return sorted(
+            {
+                name
+                for name in loaded
+                if name not in defined
+                and name not in builtins_names
+                and name not in allowed_short
+            }
+        )

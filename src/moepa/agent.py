@@ -69,13 +69,20 @@ class MOEPAGemmaAgent:
                 metrology.record_and_check_stagnation(f"MISSING_FILE:{target_file}")
                 continue
 
-            # Ontological boundary: reject edits that invent symbols outside G_sub.
+            # Ontological boundary (enforced): a patch that reads a name
+            # neither defined in the file, a builtin, nor in G_sub is
+            # rejected before it is applied — and therefore before any test
+            # runs. Rejection records stagnation, so a repeated failure
+            # widens the neighborhood (Metrology pivot).
             offenders = self.ontology.reject_out_of_neighborhood(
-                re.findall(r"\b([A-Za-z_][A-Za-z0-9_]{2,})\b", patched_code),
+                patched_code,
                 set(subgraph_ctx) | set(seed_symbols),
             )
-            # Soft check only on defined names is too noisy; keep as telemetry string.
-            _ = offenders
+            if offenders:
+                metrology.record_and_check_stagnation(
+                    "OUT_OF_NEIGHBORHOOD: " + ", ".join(offenders[:8])
+                )
+                continue
 
             self._apply_file_edit(full_target_path, patched_code)
 
